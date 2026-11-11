@@ -107,12 +107,62 @@ svg text{font-family:var(--font)}
 #toc button:hover,#toc button:focus-visible{border-color:var(--teal);background:var(--teal-t);outline:none}
 #toc button .k{color:var(--ink2);font-variant-numeric:tabular-nums;flex:none;width:22px}
 #toc button.cur{border-color:var(--orange);background:var(--orange-t)}
-#hint{display:none}
-@media (orientation:portrait) and (max-width:700px){#hint{display:block;position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);text-align:center;font-size:13px;padding:6px 16px;background:var(--amber-t);color:var(--ink);z-index:3}#cur{display:none}}
+#toc .tools{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:14px;color:var(--ink2);margin-bottom:4px}
+#toc .tools a{color:var(--teal);font-weight:700}
+kbd{font:inherit;font-size:12px;border:1px solid var(--line);border-radius:4px;padding:1px 6px;background:var(--mat);color:var(--ink)}
+/* ---- reading mode (phones, small windows): slides reflow and scroll ---- */
+body.mob #wrap{overflow-y:auto;-webkit-overflow-scrolling:touch}
+body.mob #stage{position:static;width:auto;height:auto;transform:none!important;box-shadow:none;background:var(--mat);display:flex;flex-direction:column;gap:10px;padding:10px 0 24px}
+body.mob .slide{position:relative;inset:auto;display:flex;background:var(--bg);font-size:17px;line-height:1.55;gap:12px;padding:18px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px))}
+body.mob .slide.sect{background:var(--ink);padding-top:30px;padding-bottom:30px;gap:8px}
+body.mob .hd{flex-direction:column;align-items:flex-start;gap:6px}
+body.mob .chip{font-size:12px;padding:2px 9px}
+body.mob h1{font-size:24px}
+body.mob .cover h1,body.mob .sect h1{font-size:34px}
+body.mob .sect .no{font-size:14px}body.mob .sect p{font-size:17px}
+body.mob .bd{gap:14px;flex:none}
+body.mob .row{flex-direction:column;gap:14px;flex:none}
+body.mob .col{flex:0 0 auto!important;gap:12px}
+body.mob .g2,body.mob .g3,body.mob .g4,body.mob .vs{grid-template-columns:1fr;gap:12px}
+body.mob .g2:has(>.fig){grid-template-columns:1fr 1fr}
+body.mob .g3:has(>.fig){grid-template-columns:1fr 1fr 1fr}
+body.mob .g5,body.mob .road{grid-template-columns:1fr 1fr;gap:10px}
+body.mob .g5 img{height:110px!important}
+body.mob .box{padding:13px 15px}body.mob .box h3{font-size:19px!important;margin-bottom:5px}
+body.mob .lg{font-size:20px}body.mob .xl{font-size:36px}body.mob .sm{font-size:14px}
+body.mob .key{font-size:17px;padding:11px 15px}
+body.mob .fig img,body.mob .fig video{max-height:70vh!important}
+body.mob .fig figcaption{font-size:13px}body.mob .src{font-size:12px}
+body.mob .yt{padding:8px;gap:10px}body.mob .yt .th{width:112px;height:63px}body.mob .yt .tt{font-size:15px}body.mob .yt .ch,body.mob .yt .u{font-size:12px}body.mob .yt .qr{display:none}
+body.mob ol.steps li{padding-left:38px}body.mob ol.steps li::before{width:27px;height:27px;font-size:15px}
+body.mob ol.steps{font-size:inherit!important}
+body.mob ul.pts li{padding-left:22px}body.mob ul.pts li::before{width:9px;height:9px;left:3px}
+body.mob .opt{font-size:18px;padding:10px 16px;border-width:2px}
+body.mob table.tb{font-size:14px}body.mob table.tb th{white-space:normal}body.mob table.tb tr>th:first-child{min-width:4.3em}body.mob table.tb th,body.mob table.tb td{padding:7px 6px}
+body.mob .tl{grid-template-columns:98px 1fr;column-gap:10px;font-size:15px}
+body.mob .road .st{padding:9px 10px;gap:8px}body.mob .road .st img{width:40px;height:40px}body.mob .road .st .w{font-size:16px}body.mob .road .st .n{font-size:12px}
+body.mob .qrb .n{font-size:18px}body.mob .qrb{flex-direction:column!important;text-align:center!important}
+body.mob svg{max-height:none!important}
+body.mob #cur{display:none}
+body.mob #bFs{display:none}
+/* ---- print mode (?print=2 or 4): used to build the PDF handout ---- */
+html.print,html.print body{height:auto;overflow:visible;background:#fff}
+body.print #bar,body.print #prog,body.print #toc{display:none!important}
+body.print #wrap{position:static;overflow:visible}
+body.print #stage{position:static;width:auto;height:auto;transform:none!important;box-shadow:none}
+body.print .page{box-sizing:border-box;page-break-after:always;break-after:page;display:flex;flex-direction:column;overflow:hidden}
+body.print .ph{display:flex;justify-content:space-between;font-size:8.5pt;color:var(--ink2);flex:none}
+body.print .cells{flex:1;display:grid;align-content:space-evenly;justify-content:center}
+body.print .cell{position:relative;overflow:hidden;border:.3mm solid var(--line)}
+body.print .cell .slide{display:flex;position:absolute;inset:auto;left:0;top:0;width:1600px;height:900px}
+body.print .notes{height:21mm;background:repeating-linear-gradient(to bottom,transparent 0,transparent 6.7mm,var(--line) 6.7mm,var(--line) 7mm)}
+body.print .slide.sect{background:var(--teal-t);color:var(--ink)}body.print .sect h1{color:var(--ink)}body.print .sect p{color:var(--ink2)}body.print .sect .no{color:var(--teal)}
+body.print .key{background:#fff;color:var(--ink);border:3px solid var(--ink)}body.print .key b{color:var(--orange)}
+body.print .ans[hidden]{display:block!important}
+body.print .opt.ok{background:#fff;color:var(--ok)}
 @media (prefers-reduced-motion:reduce){#prog{transition:none}}
 </style>
 
-<div id="hint">手機橫放看比較清楚；左右滑動換頁</div>
 <div id="wrap"><div id="stage"></div></div>
 <div id="toc" hidden></div>
 <div id="prog"></div>
@@ -121,6 +171,7 @@ svg text{font-family:var(--font)}
   <span id="pos"></span>
   <button id="bNext" type="button" aria-label="下一頁">▶</button>
   <span id="cur"></span>
+  <button id="bMode" type="button">閱讀模式</button>
   <button id="bToc" type="button">目錄</button>
   <button id="bFs" type="button">全螢幕</button>
 </div>
@@ -190,7 +241,8 @@ SL.push({sec,title:'封面',cls:'cover',raw:
  '<div class="row mid"><div class="col f3" style="gap:26px"><div class="chip" style="align-self:flex-start">伊甸南投耆福長照機構｜長照人員在職訓練</div>'
  +'<h1>安全<em>移轉位</em>技巧<br>與實務演練</h1>'
  +'<div class="lg">11 月 14 日（六）13:00–17:00｜南投市</div>'
- +'<div class="sm">講師　鍾孟修 職能治療師｜愛迪樂居家職能治療所</div></div>'
+ +'<div class="sm">講師　鍾孟修 職能治療師｜愛迪樂居家職能治療所</div>'
+ +'<a class="qrb" href="'+QR.deck.u+'" target="_blank" rel="noopener" style="flex-direction:row;gap:18px;text-align:left;align-self:flex-start">'+qrSvg('deck',150)+'<span><span class="n" style="display:block">掃描帶走這份簡報</span><span class="u" style="display:block;max-width:none">'+QR.deck.u.replace('https://','')+'</span></span></a></div>'
  +'<div class="col f2 ctr">'+I(1,'',560)+'</div></div>'});
 
 S('講師｜鍾孟修 職能治療師','<div class="row"><div class="col f1 ctr">'+I(2,'',640)+'</div><div class="col f2 ctr">'
@@ -234,6 +286,8 @@ S('四種轉位方式：哪一個不是零抬舉？','<div class="row"><div clas
 S('動手之前，先問四個問題','<div class="row"><div class="col f1 ctr">'+C('assess-4q','',400)+'</div><div class="col f1 ctr">'+C('flowchart','',400)+'</div></div><div class="row" style="flex:none"><div class="box f1"><p><b>腳能撐住嗎？能配合口令嗎？坐得穩嗎？手有力氣嗎？</b>四題的答案決定用復能版還是協助版，以及要不要輔具或第二個人。</p></div>'+'<a class="qrb" href="'+QR.lib.u+'" target="_blank" rel="noopener" style="flex-direction:row;gap:16px;text-align:left">'+qrSvg('lib',120)+'<span><span class="n" style="display:block;font-size:22px">轉移位影片資料庫<br>有「先問四個問題」互動版</span></span></a></div>'+SRC('圖：鍾孟修〈轉移位技巧：不是比力氣，是比方法〉動畫'));
 S('記住三個不要','<div class="row"><div class="col f3 ctr">'+C('donts','',560)+'</div><div class="col f2 ctr"><div class="box o"><ul class="pts o"><li><b>不拉手臂</b>：肩膀容易拉傷、半脫位。</li><li><b>不從腋下抱</b>：壓迫腋下、傷肩。</li><li><b>不扭腰轉身</b>：照顧者閃到腰。</li></ul></div><div class="box"><ul class="pts"><li>兩腳打開、膝蓋彎、靠近長輩</li><li>用腳步轉、用腿出力</li></ul></div></div></div>');
 
+S('什麼時候不要一個人徒手做','<div class="row"><div class="col f1 ctr"><div class="box o"><h3>遇到這些情況，先停</h3><ul class="pts o"><li>個案完全無法出力，體重又比你重很多。</li><li>個案躁動、抗拒、聽不懂口令。</li><li>個案今天特別虛弱、頭暈、血壓不穩，或身上有管路。</li><li>你自己的腰、肩正在痛。</li><li>空間太小，輪椅擺不到位。</li></ul></div></div><div class="col f1 ctr"><div class="box"><h3>改成這樣做</h3><ul class="pts"><li>找第二個人，一人顧上身、一人顧骨盆和腳。</li><li>用輔具：移位腰帶、移位板、滑布、轉盤、移位機。</li><li>回報居督或個管，申請輔具評估。</li></ul></div><p class="sm">補充：美國 NIOSH 建議，徒手協助移位時照顧者實際承擔的重量以 16 公斤（35 磅）為上限，超過就該用輔具。</p></div></div><div class="key">零抬舉的意思不是「更會抱」，是<b>抱不動的時候不要硬抱</b>。</div>');
+
 /* ===== C ===== */
 SEC('第三部分','保護自己：安全注意事項','髖鉸鍊、彎一腳直一腳、必要時穿護腰。');
 S('安全注意事項：三件事','<div class="g3" style="flex:1"><div class="box"><h3>1　髖鉸鍊 Hip hinge</h3><p>髖關節做屈曲和伸展，過程中脊柱保持挺直。彎的是髖，不是腰。</p></div><div class="box"><h3>2　彎一腳、直一腳</h3><p>鎖定髖關節，讓脊椎保持中立。弓箭步也有同樣效果。</p></div><div class="box"><h3>3　必要時穿護腰</h3><p>位置、鬆緊、時機、寬度都要對。髂嵴是關鍵。</p></div></div><div class="key">接下來三段都請大家<b>站起來一起做</b>。</div>');
@@ -248,7 +302,7 @@ S('護腰和姿勢的迷思','<div class="row"><div class="col f1 ctr">'+I(52,''
 /* ===== D ===== */
 SEC('第 1 站','床面上轉位技巧','往上移、左右移。先請個案自己來，再用床和滑布幫忙。');
 S('床上移動：先問兩個狀況','<div class="row"><div class="col f1 ctr"><div class="box o"><h3>常見狀況</h3><ul class="pts o"><li>個案在床上往下滑了，怎麼辦？</li><li>個案不在床的正中央，怎麼辦？</li></ul></div></div><div class="col f1 ctr"><div class="box"><h3>復能版：個案能出力</h3><ul class="pts"><li>屈膝踩床、<b>移動腳、抬臀</b></li><li><b>手撐、手拉</b>床欄協助</li><li>善用扶手欄杆和三折照顧床</li></ul></div><div class="box o"><h3>協助版：個案依賴</h3><ul class="pts o"><li>善用滑布、移位板等輔具</li><li>兩人一起，不要一個人硬拉</li></ul></div></div></div>');
-S('善用三折照顧床','<div class="row"><div class="col f1 ctr">'+I(57,'三折床：升高頭、升高腳、升高床',300)+'<ul class="pts"><li><b>要坐起來</b>：先升腳、再升頭，屁股才不會往下滑。</li><li><b>要往上移</b>：頭放平、腳略升高，讓重力幫忙。</li><li><b>升高床面</b>到照顧者髖部附近，就不用彎腰。</li></ul></div><div class="col f1 ctr">'+V(4,'示範影片：三折照顧床的應用（3 分 59 秒）',470)+'</div></div>');
+S('善用三折照顧床','<div class="row"><div class="col f1 ctr">'+I(57,'三折床：升高頭、升高腳、升高床',300)+'<ul class="pts"><li><b>要坐起來</b>：先升腳、再升頭，屁股才不會往下滑。</li><li><b>要往上移</b>：先把床頭放平，不要在坐高的時候硬拉。</li><li><b>升高床面</b>到照顧者髖部附近，就不用彎腰。</li></ul></div><div class="col f1 ctr">'+V(4,'示範影片：三折照顧床的應用（3 分 59 秒）',470)+'</div></div>');
 S('床上往上移、左右平移','<div class="row"><div class="col f1 ctr">'+V(6,'特殊左右平移技巧（示範：鍾孟修）',520)+'</div><div class="col f2 ctr"><p><b>往上移</b>：個案屈膝踩床，照顧者固定腳掌，喊「一、二、三，屁股抬起來往上」。個案出不了力時，改用滑布。</p>'+Y('_ey9CAZAiGA','日本長期照護 轉移位 1/4：調整病患在床上的位置（國興衛視）')+Y('7wVNkms-kS0','長輩臥床床上移位教學：照顧者必知的安全技巧')+'<p class="sm">國興衛視《老師沒教的事》共四集，第 2、3 集連結放在最後的資源頁。</p></div></div>');
 S('移位滑布、移位滑墊','<div class="row"><div class="col f1 ctr">'+I(63,'床面上下左右移位',250)+I(65,'輔助翻身',250)+'</div><div class="col f1 ctr">'+I(73,'挑選時，滑布要涵蓋大部分身體面積：臀、肩、頭',290)+'<ul class="pts"><li>滑布把摩擦力降到很低，推的力氣只剩一點點。</li><li>鋪和抽都用翻身完成，不要抬人。</li></ul></div><div class="col f1 ctr">'+Y('gUgG0HS6wyk','移位滑布示範影片（成大醫院護理部製作）')+Y('arqG_2ftfOY','滑布：翻身、擺位與抽出（英國 OUH NHS）')+'</div></div>');
 S('滑墊＋固定帶，更省力也更安全','<div class="row"><div class="col f1 ctr">'+I(69,'省力向上移位',420)+'</div><div class="col f1 ctr">'+I(72,'省力側向拉動移位',420)+'</div></div><div class="key">拉的時候一樣用<b>弓箭步重心轉移</b>，手臂打直當繩子，不要用手臂彎曲去拉。</div>');
@@ -265,6 +319,9 @@ S('坐起的輔具，和直接坐起的做法','<div class="row"><div class="col
 
 /* ===== F ===== */
 SEC('第 3 站','床到輪椅轉位技巧','今天的重點。先擺對角度，再決定用復能版還是協助版。');
+S('動手前 30 秒：先檢查這六件事','<div class="g3" style="flex:1">'
+ +[['輪椅','剎車踩了嗎？腳踏板收起來了嗎？'],['床','高度和輪椅座面差不多嗎？床輪鎖了嗎？'],['地面和鞋子','地板乾的嗎？個案穿防滑鞋或止滑襪了嗎？'],['管路','尿管、鼻胃管、氧氣管夠長、不會被扯到嗎？'],['個案狀況','今天精神好嗎？剛坐起來會不會頭暈？先坐 30 秒再動。'],['說明','告訴他要去哪裡、怎麼做，約好口令「一、二、三」。']].map((a,i)=>'<div class="box'+(i>3?' o':'')+'"><h3>'+a[0]+'</h3><p>'+a[1]+'</p></div>').join('')
+ +'</div><div class="key">補充頁。多數意外不是技巧不好，是<b>剎車沒踩、腳沒擺好、沒先講</b>。</div>');
 S('床到輪椅、輪椅到床：六個步驟','<div class="row"><div class="col f3 ctr"><ol class="steps"><li><b>擺輪椅</b>：個案好邊接近輪椅，剎車，與床面夾 0–45°，注意床的高度。</li><li><b>坐到床緣</b>：讓個案移動到邊緣，腳踩地。</li><li><b>預擺</b>：先把腳和骨盆擺到稍微偏向轉位方向。</li><li><b>穩定膝蓋</b>：膝蓋微彎、身體保持直立。卡雙膝、卡單壞、卡單好、不卡，或用膝蓋綁帶。</li><li><b>抓握</b>：照顧者抓肩胛骨、腰帶或褲頭；個案抓照顧者衣物、環抱，或抓支撐面、扶手。</li><li><b>弓箭步</b>：重心轉移，注意方向。</li></ol></div><div class="col f2 ctr">'+C('setup-top','',330)+'<div class="box a"><p class="sm" style="color:var(--ink)">反過來從輪椅回床，步驟一樣，方向相反，一樣讓好邊靠近目的地。</p></div></div></div>');
 S('輪椅跟床：<em>30–45 度</em>，還是<em>貼著</em>？','<div class="vs">'
  +'<div class="col"><div class="box" style="padding:12px 22px"><h3 style="margin:0">個案有能力：夾 30–45°</h3></div>'+topView('a')+'<p class="sm" style="margin:0">能撐起屁股、手能<b>抓住對面的扶手</b>。他自己轉，你保護。這是<b>復能轉移位</b>。</p></div>'
@@ -309,7 +366,7 @@ S('止滑坐墊，和骨盆帶的位置','<div class="row"><div class="col f1 ct
 
 /* ===== J ===== */
 SEC('第 6 站','推輪椅與上下車','高低差、斜坡、縫隙，還有司機每天都要做的上下車。');
-S('推輪椅：前推、後推、翹起前推','<div class="row"><div class="col f1 ctr">'+I(167,'照顧者依不同環境，協助推輪椅的安全模式',640)+'</div><div class="col f1 ctr"><div class="g3"><div class="box"><h3>前推</h3><p class="sm">平地、上坡</p></div><div class="box"><h3>後推</h3><p class="sm">下陡坡、下平台、過縫隙</p></div><div class="box"><h3>翹起前推</h3><p class="sm">上平台、過門檻</p></div></div><div class="box o"><p><b>下坡、下平台用前推很危險</b>，個案會往前栽。倒退著下，照顧者在下方擋。</p></div><p class="sm">坡度小於 1:12（約 5 度）是緩坡，大於則是陡坡。</p></div></div>'+SRC('圖片來源：楊忠一《行動輔具怎麼選怎麼用》（2019）'));
+S('推輪椅：前推、後推、翹起前推','<div class="row"><div class="col f1 ctr">'+I(167,'照顧者依不同環境，協助推輪椅的安全模式',640)+'</div><div class="col f1 ctr"><div class="g3"><div class="box"><h3>前推</h3><p class="sm">平地、上坡、下緩坡</p></div><div class="box"><h3>後推</h3><p class="sm">下陡坡、下平台、過門檻與縫隙</p></div><div class="box"><h3>翹起前推</h3><p class="sm">上平台、過門檻與縫隙</p></div></div><div class="box o"><p><b>下陡坡、下平台用前推很危險</b>，個案會往前栽。倒退著下，照顧者在下方擋。</p></div><p class="sm">坡度小於 1:12（約 5 度）是緩坡，大於則是陡坡。</p></div></div>'+SRC('圖片來源：楊忠一《行動輔具怎麼選怎麼用》（2019）'));
 S('平台、門檻、縫隙','<div class="g3" style="flex:1;min-height:0"><div class="col"><div class="box" style="padding:10px 18px"><h3 style="margin:0">平台</h3></div>'+I(161,'上：翹起前推',230)+I(162,'下：後退',230)+'</div><div class="col"><div class="box" style="padding:10px 18px"><h3 style="margin:0">門檻</h3></div>'+I(163,'前進：翹起前輪',230)+I(164,'後退通過',230)+'</div><div class="col"><div class="box" style="padding:10px 18px"><h3 style="margin:0">縫隙</h3></div>'+I(165,'前進：翹起前輪',230)+I(166,'後退通過',230)+'</div></div>'+SRC('圖片來源：楊忠一《行動輔具怎麼選怎麼用》（2019）'));
 S('雙人手推輪椅上下樓梯','<div class="row"><div class="col f1 ctr">'+I(168,'',560)+'</div><div class="col f1 ctr"><ul class="pts"><li>輪椅後傾，後輪貼著階梯，一階一階滾。</li><li>後方的人主要出力，前方的人抓骨架（不是抓腳踏板）穩定方向。</li><li>先喊口令再動，每一階都停一下。</li></ul>'+Y('pePSC1tlL6I','輪椅手動上下樓梯操作教學：雙人協力（瞭輔具）',120)+'</div></div>'+SRC('圖片來源：楊忠一《行動輔具怎麼選怎麼用》（2019）'));
 S('猜猜看，這是什麼輔具？','<div class="row"><div class="col f1 ctr">'+I(171,'',300)+'</div><div class="col f1 ctr">'+I(175,'',400)+'</div><div class="col f1 ctr">'+I(174,'',300)+'</div></div>'+Qz(['看答案'],0,'<b>汽車安全扶手。</b>卡在車門鎖扣上當把手；另外還有掛在頭枕上的拉把、放在座椅上的旋轉座墊。'));
@@ -326,36 +383,62 @@ S('更多延伸影片','<div class="g2" style="flex:1;align-content:center">'+Y(
 S('今天帶走五句話','<ol class="steps" style="gap:16px;font-size:34px;font-weight:700;flex:1;justify-content:center"><li>做得到的不幫，做不到的才補。</li><li>有能力，輪椅夾 <span class="o-t">30–45°</span>、抓對側扶手；沒能力，輪椅<span class="o-t">貼床</span>、弓箭步。</li><li>頭過腳尖，屁股才起得來。</li><li>彎髖不彎腰，用腳步轉不扭腰。</li><li>水平取代垂直，能用輔具就用輔具。</li></ol><div class="key">謝謝大家。有問題現在問，或到臉書「<b>鍾孟修 Matt 職能治療師</b>」留言。</div>');
 
 /* ---------- render ---------- */
-const stage=document.getElementById('stage');
+const stage=document.getElementById('stage'),wrap=document.getElementById('wrap'),toc=document.getElementById('toc');
 stage.innerHTML=SL.map((s,i)=>'<section class="slide '+(s.cls||'')+'" id="p'+(i+1)+'">'+(s.raw!==undefined?s.raw:'<div class="hd"><span class="chip">'+s.sec+'</span><h1>'+s.title+'</h1></div><div class="bd">'+s.body+'</div>')+'</section>').join('');
-const els=[...stage.children];let cur=0;
+const els=[...stage.children];let cur=0,mob=false,forced=null;
 const plain=h=>h.replace(/<[^>]+>/g,'');
-function fit(){const w=document.getElementById('wrap'),k=Math.min(w.clientWidth/1600,w.clientHeight/900);stage.style.transform='scale('+k+') translate(-50%,-50%)';}
-function go(n,fromHash){n=Math.max(0,Math.min(els.length-1,n));els[cur].classList.remove('on');els[cur].querySelectorAll('video').forEach(v=>v.pause());cur=n;els[cur].classList.add('on');
-  document.getElementById('pos').textContent=(cur+1)+' / '+els.length;document.getElementById('cur').textContent=SL[cur].sec+'｜'+plain(SL[cur].title);
-  document.getElementById('prog').style.width=((cur+1)/els.length*100)+'%';
-  if(!fromHash){try{history.replaceState(null,'','#p'+(cur+1));}catch(e){location.hash='p'+(cur+1);}}}
+const PRINT=(()=>{try{return new URLSearchParams(location.search).get('print');}catch(e){return null;}})();
+if(PRINT){ // handout layout: N slides per A4 page, answers shown, videos as stills
+  const per=PRINT==='4'?4:2,land=per===4,W=land?297:210,H=land?210:297,cw=land?136:186,ch=cw*9/16,k=cw/25.4*96/1600;
+  document.documentElement.classList.add('print');document.body.classList.add('print');
+  const st=document.createElement('style');st.textContent='@page{size:'+W+'mm '+H+'mm;margin:0}body.print .page{width:'+W+'mm;height:'+H+'mm;padding:'+(land?'8mm 9mm':'10mm 12mm')+'}body.print .cells{grid-template-columns:repeat('+(land?2:1)+','+cw+'mm);gap:'+(land?'5mm 7mm':'3mm')+'}body.print .cell{width:'+cw+'mm;height:'+ch+'mm}body.print .cell .slide{zoom:'+k+'}';document.head.appendChild(st);
+  stage.querySelectorAll('img').forEach(im=>im.loading='eager');
+  stage.querySelectorAll('video').forEach(v=>{const im=document.createElement('img');im.src=v.getAttribute('poster');im.style.cssText=v.style.cssText;v.replaceWith(im);});
+  stage.querySelectorAll('.opt[data-ok="1"]').forEach(b=>b.classList.add('ok'));
+  const pages=Math.ceil(els.length/per);
+  for(let p=0;p<pages;p++){const pg=document.createElement('div');pg.className='page';pg.innerHTML='<div class="ph"><span>安全移轉位技巧與實務演練｜伊甸南投耆福長照機構｜鍾孟修 職能治療師</span><span>'+(p+1)+' / '+pages+'</span></div><div class="cells"></div>';
+    const cs=pg.querySelector('.cells');els.slice(p*per,p*per+per).forEach(e=>{const c=document.createElement('div');c.className='cell';c.appendChild(e);cs.appendChild(c);if(!land){const n=document.createElement('div');n.className='notes';cs.appendChild(n);}});stage.appendChild(pg);}
+  return;
+}
+function fit(){if(mob){stage.style.transform='';return;}const k=Math.min(wrap.clientWidth/1600,wrap.clientHeight/900);stage.style.transform='scale('+k+') translate(-50%,-50%)';}
+function label(){document.getElementById('pos').textContent=(cur+1)+' / '+els.length;document.getElementById('cur').textContent=SL[cur].sec+'｜'+plain(SL[cur].title);
+  document.getElementById('prog').style.width=((cur+1)/els.length*100)+'%';}
+function setHash(){try{history.replaceState(null,'','#p'+(cur+1));}catch(e){}}
+function go(n,quiet){n=Math.max(0,Math.min(els.length-1,n));els[cur].classList.remove('on');els[cur].querySelectorAll('video').forEach(v=>v.pause());cur=n;els[cur].classList.add('on');
+  [els[cur+1],els[cur+2]].forEach(e=>e&&e.querySelectorAll('img').forEach(im=>im.loading='eager'));
+  if(mob){lock=Date.now()+700;els[cur].scrollIntoView({block:'start'});}
+  label();if(!quiet)setHash();}
+let lock=0,raf=0;
+wrap.addEventListener('scroll',()=>{if(!mob||raf)return;raf=requestAnimationFrame(()=>{raf=0;if(Date.now()<lock)return;const top=wrap.getBoundingClientRect().top+90;let n=0;for(let i=0;i<els.length;i++){if(els[i].getBoundingClientRect().top<=top)n=i;else break;}
+  if(n!==cur){els[cur].classList.remove('on');cur=n;els[cur].classList.add('on');label();setHash();}});},{passive:true});
+function setMode(){const m=forced!==null?forced:(innerWidth<820||innerHeight<500);if(m!==mob){mob=m;document.body.classList.toggle('mob',mob);document.getElementById('bMode').textContent=mob?'簡報模式':'閱讀模式';}
+  fit();if(mob){lock=Date.now()+700;els[cur].scrollIntoView({block:'start'});}}
 function fromHash(){const m=/^#p(\d+)$/.exec(location.hash);go(m?+m[1]-1:0,true);}
-const toc=document.getElementById('toc');
-function buildToc(){let h='',last='';SL.forEach((s,i)=>{if(s.sec!==last){if(last)h+='</div>';h+='<h2>'+s.sec+'</h2><div class="ti">';last=s.sec;}h+='<button type="button" data-i="'+i+'"><span class="k">'+(i+1)+'</span><span>'+plain(s.title)+'</span></button>';});toc.innerHTML=h+'</div>';}
+const PUB=/github\.io$|^localhost$/.test(location.hostname);
+function buildToc(){let h='<div class="tools"><span><kbd>←</kbd> <kbd>→</kbd> 換頁　<kbd>G</kbd> 目錄　<kbd>F</kbd> 全螢幕　<kbd>R</kbd> 閱讀模式</span>'+(PUB?'<a href="handout-2up.pdf" target="_blank" rel="noopener">講義 PDF（每頁 2 張）</a><a href="handout-4up.pdf" target="_blank" rel="noopener">講義 PDF（每頁 4 張）</a>':'')+'</div>',last='';
+  SL.forEach((s,i)=>{if(s.sec!==last){if(last)h+='</div>';h+='<h2>'+s.sec+'</h2><div class="ti">';last=s.sec;}h+='<button type="button" data-i="'+i+'"><span class="k">'+(i+1)+'</span><span>'+plain(s.title)+'</span></button>';});toc.innerHTML=h+'</div>';}
 function toggleToc(f){const show=f!==undefined?f:toc.hidden;toc.hidden=!show;if(show){toc.querySelectorAll('button').forEach(b=>b.classList.toggle('cur',+b.dataset.i===cur));const c=toc.querySelector('.cur');if(c)c.scrollIntoView({block:'center'});}}
-toc.addEventListener('click',e=>{const b=e.target.closest('button');if(b){go(+b.dataset.i);toggleToc(false);}});
+toc.addEventListener('click',e=>{const b=e.target.closest('button');if(b){toggleToc(false);go(+b.dataset.i);}});
 stage.addEventListener('click',e=>{const o=e.target.closest('.opt');if(!o)return;const q=o.closest('.quiz');q.querySelectorAll('.opt').forEach(b=>{b.classList.remove('ok','no');if(b.dataset.ok==='1')b.classList.add('ok');});if(o.dataset.ok!=='1')o.classList.add('no');q.querySelector('.ans').hidden=false;});
+function fs(){const d=document.documentElement;try{(document.fullscreenElement?document.exitFullscreen():d.requestFullscreen()).catch(()=>{});}catch(e){}}
 document.getElementById('bPrev').onclick=()=>go(cur-1);document.getElementById('bNext').onclick=()=>go(cur+1);
-document.getElementById('bToc').onclick=()=>toggleToc();
-document.getElementById('bFs').onclick=()=>{const d=document.documentElement;try{(document.fullscreenElement?document.exitFullscreen():d.requestFullscreen()).catch(()=>{});}catch(e){}};
-document.addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('video'))return;const k=e.key;
+document.getElementById('bToc').onclick=()=>toggleToc();document.getElementById('bFs').onclick=fs;
+document.getElementById('bMode').onclick=()=>{forced=!mob;setMode();};
+document.addEventListener('keydown',e=>{if(e.metaKey||e.ctrlKey||e.altKey)return;if(e.target.closest&&e.target.closest('video'))return;const k=e.key;
   if(k==='Escape'){toggleToc(false);return;}
   if(k==='g'||k==='G'){toggleToc();return;}
   if(!toc.hidden)return;
-  if(k==='ArrowRight'||k==='PageDown'||k===' '&&!e.target.closest('button,a')){e.preventDefault();go(cur+1);}
+  if(k==='f'||k==='F'){fs();return;}
+  if(k==='r'||k==='R'){forced=!mob;setMode();return;}
+  if(mob&&(k===' '||k==='PageDown'||k==='PageUp'))return;
+  if(k==='ArrowRight'||k==='PageDown'||(k===' '&&!e.target.closest('button,a'))){e.preventDefault();go(cur+1);}
   else if(k==='ArrowLeft'||k==='PageUp'){e.preventDefault();go(cur-1);}
   else if(k==='Home')go(0);else if(k==='End')go(els.length-1);});
-let tx=null,ty=null;const wrap=document.getElementById('wrap');
+let tx=null,ty=null;
 wrap.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY;},{passive:true});
-wrap.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1));},{passive:true});
-window.addEventListener('resize',fit);window.addEventListener('hashchange',fromHash);
-buildToc();fit();fromHash();
+wrap.addEventListener('touchend',e=>{if(tx===null||mob){tx=null;return;}const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1));},{passive:true});
+window.addEventListener('resize',setMode);window.addEventListener('hashchange',fromHash);
+buildToc();fromHash();setMode();
 })();
 </script>
 
