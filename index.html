@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="安全移轉位技巧與實務演練"><meta property="og:description" content="復能與協助轉移位、輪椅角度、特殊轉移位技巧｜鍾孟修 職能治療師">
+<meta property="og:image" content="https://mattsue1003.github.io/safe-transfer-deck/img/c-setup-top.jpg"><meta property="og:type" content="website">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head><body>
+<title>安全移轉位技巧與實務演練</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: one fixed 1600x900 stage scaled to the window, white ground so the deck's line drawings sit flush; a slim control bar underneath. Single light look on purpose (projected in a classroom). */
+:root{
+  --bg:#FFFFFF; --ink:#12343B; --ink2:#47666C; --teal:#028090; --teal-t:#E4F2F4; --orange:#E8552D; --orange-t:#FDECE5;
+  --amber:#F4A93C; --amber-t:#FEF4E0; --line:#CFDDE0; --mat:#E9F0F1; --ok:#1E8E5A; --no:#C93A2B;
+  --font:"Noto Sans TC","PingFang TC","Microsoft JhengHei","Heiti TC",sans-serif;
+  color-scheme:light;
+}
+html,body{height:100%}
+body{margin:0;background:var(--mat);color:var(--ink);font-family:var(--font);overflow:hidden;
+  padding-left:max(0px,env(safe-area-inset-left,0px));padding-right:max(0px,env(safe-area-inset-right,0px))}
+#wrap{position:fixed;inset:0 0 46px 0;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1600px;height:900px;transform-origin:0 0;background:var(--bg);box-shadow:0 2px 24px rgba(18,52,59,.14)}
+.slide{position:absolute;inset:0;padding:50px 70px 44px;display:none;flex-direction:column;gap:22px;font-size:28px;line-height:1.5;box-sizing:border-box}
+.slide.on{display:flex}
+.hd{display:flex;align-items:baseline;gap:18px;flex:none}
+.chip{flex:none;font-size:20px;font-weight:700;color:var(--teal);background:var(--teal-t);padding:4px 14px;border-radius:6px;letter-spacing:.06em;white-space:nowrap}
+h1{margin:0;font-size:48px;line-height:1.25;font-weight:900;text-wrap:balance}
+h1 em{font-style:normal;color:var(--orange)}
+.bd{flex:1;min-height:0;display:flex;flex-direction:column;gap:20px}
+.row{display:flex;gap:34px;flex:1;min-height:0;align-items:stretch}
+.col{display:flex;flex-direction:column;gap:18px;min-width:0;min-height:0}
+.f1{flex:1}.f2{flex:2}.f3{flex:3}.ctr{justify-content:center}.mid{align-items:center}
+.g2,.g3,.g4,.g5{display:grid;gap:22px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.box{background:var(--teal-t);border-radius:10px;padding:20px 26px}
+.box.o{background:var(--orange-t)}.box.a{background:var(--amber-t)}.box.w{background:var(--bg);border:2px solid var(--line)}
+.box h3{margin:0 0 8px;font-size:32px;font-weight:900;color:var(--teal)}
+.box.o h3{color:var(--orange)}
+.box p{margin:0}
+.g2>.box,.g3>.box{display:flex;flex-direction:column;justify-content:center;gap:8px}
+ul.pts,ol.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+ul.pts li{padding-left:30px;position:relative}
+ul.pts li::before{content:"";position:absolute;left:4px;top:.62em;width:12px;height:12px;border-radius:50%;background:var(--teal)}
+.o ul.pts li::before,ul.pts.o li::before{background:var(--orange)}
+ol.steps{counter-reset:s}
+ol.steps li{counter-increment:s;padding-left:54px;position:relative}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:.08em;width:38px;height:38px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center}
+ol.steps.o li::before{background:var(--orange)}
+b,strong{font-weight:900}.t{color:var(--teal)}.o-t{color:var(--orange)}
+.sm{font-size:23px;color:var(--ink2)}.lg{font-size:36px;font-weight:700}.xl{font-size:60px;font-weight:900;line-height:1.15}
+.key{flex:none;background:var(--ink);color:#fff;border-radius:10px;padding:14px 26px;font-weight:700;font-size:30px}
+.key b{color:var(--amber)}
+.fig{margin:0;display:flex;flex-direction:column;gap:6px;align-items:center;min-height:0;min-width:0}
+.fig img,.fig video{max-width:100%;object-fit:contain;border-radius:6px;display:block;min-height:0}
+.fig video{background:#000}
+.fig figcaption{font-size:20px;color:var(--ink2);text-align:center;line-height:1.35}
+.src{font-size:17px;color:var(--ink2);flex:none}
+.yt{display:flex;gap:16px;align-items:center;background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:12px;color:var(--ink);text-decoration:none;min-width:0}
+.yt:hover,.yt:focus-visible{border-color:var(--teal);outline:none}
+.yt .th{position:relative;flex:none;width:176px;height:99px;border-radius:6px;overflow:hidden;background:var(--mat)}
+.yt .th img{width:100%;height:100%;object-fit:cover}
+.yt .th::after{content:"";position:absolute;left:50%;top:50%;margin:-14px 0 0 -9px;border-left:24px solid #fff;border-top:14px solid transparent;border-bottom:14px solid transparent;filter:drop-shadow(0 0 5px rgba(0,0,0,.6))}
+.yt .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.yt .tt{font-size:22px;font-weight:700;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.yt .ch{font-size:17px;color:var(--ink2)}
+.yt .u{font-size:16px;color:var(--teal);word-break:break-all}
+.qr{flex:none;background:#fff;padding:5px;border-radius:4px;line-height:0}
+.qr svg{display:block}
+.qrb{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;color:var(--ink);text-decoration:none}
+.qrb .n{font-weight:900;font-size:26px}.qrb .u{font-size:17px;color:var(--teal);word-break:break-all;max-width:330px}
+.quiz{display:flex;flex-direction:column;gap:14px}
+.opts{display:flex;flex-wrap:wrap;gap:14px}
+.opt{font:inherit;font-size:30px;font-weight:700;color:var(--ink);background:var(--bg);border:3px solid var(--line);border-radius:10px;padding:12px 26px;cursor:pointer;text-align:left}
+.opt:hover,.opt:focus-visible{border-color:var(--teal);outline:none}
+.opt.ok{background:var(--ok);border-color:var(--ok);color:#fff}.opt.no{background:#F4E3E0;border-color:var(--no);color:var(--no)}
+.ans{border-left:8px solid var(--orange);background:var(--orange-t);border-radius:0 10px 10px 0;padding:14px 22px}
+table.tb{border-collapse:collapse;width:100%;font-size:24px}
+table.tb th,table.tb td{border-bottom:2px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+table.tb th{color:var(--teal);font-weight:900;white-space:nowrap}
+table.tb td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.cover{justify-content:center;gap:26px;padding:70px 90px}
+.cover h1{font-size:84px}
+.sect{background:var(--ink);color:#fff;justify-content:center;gap:18px;padding:70px 110px}
+.sect .no{font-size:30px;font-weight:700;color:var(--amber);letter-spacing:.12em}
+.sect h1{font-size:88px;color:#fff}
+.sect p{margin:0;font-size:34px;color:#CFE3E6;max-width:1150px}
+.road{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.road .st{border:2px solid var(--line);border-radius:10px;padding:14px 18px;display:flex;gap:14px;align-items:center}
+.road .st img{width:74px;height:74px;object-fit:contain;flex:none}
+.road .st .n{font-size:19px;font-weight:700;color:var(--teal)}
+.road .st .w{font-size:27px;font-weight:900;line-height:1.25}
+.tl{display:grid;grid-template-columns:190px 1fr;column-gap:24px;row-gap:9px;font-size:27px}
+.tl .tm{font-weight:900;color:var(--teal);font-variant-numeric:tabular-nums}
+.tl .br{color:var(--ink2)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1;min-height:0}
+svg text{font-family:var(--font)}
+/* control bar */
+#bar{position:fixed;left:0;right:0;bottom:0;height:46px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:8px;padding:0 max(12px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(12px,env(safe-area-inset-left,0px));font-size:15px;z-index:5}
+#bar button{font:inherit;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:5px 12px;cursor:pointer}
+#bar button:hover,#bar button:focus-visible{background:rgba(255,255,255,.16);outline:2px solid var(--amber);outline-offset:1px}
+#pos{font-variant-numeric:tabular-nums;min-width:64px;text-align:center}
+#cur{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.85}
+#prog{position:fixed;left:0;bottom:46px;height:4px;background:var(--orange);z-index:6;transition:width .2s}
+#toc{position:fixed;inset:0 0 46px 0;background:var(--bg);z-index:4;overflow:auto;padding:22px max(16px,env(safe-area-inset-right,0px)) 30px max(16px,env(safe-area-inset-left,0px))}
+#toc h2{font-size:17px;color:var(--teal);margin:18px 0 6px;letter-spacing:.05em}
+#toc .ti{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px}
+#toc button{font:inherit;font-size:15px;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 10px;cursor:pointer;color:var(--ink);display:flex;gap:8px}
+#toc button:hover,#toc button:focus-visible{border-color:var(--teal);background:var(--teal-t);outline:none}
+#toc button .k{color:var(--ink2);font-variant-numeric:tabular-nums;flex:none;width:22px}
+#toc button.cur{border-color:var(--orange);background:var(--orange-t)}
+#hint{display:none}
+@media (orientation:portrait) and (max-width:700px){#hint{display:block;position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);text-align:center;font-size:13px;padding:6px 16px;background:var(--amber-t);color:var(--ink);z-index:3}#cur{display:none}}
+@media (prefers-reduced-motion:reduce){#prog{transition:none}}
+</style>
+
+<div id="hint">手機橫放看比較清楚；左右滑動換頁</div>
+<div id="wrap"><div id="stage"></div></div>
+<div id="toc" hidden></div>
+<div id="prog"></div>
+<div id="bar">
+  <button id="bPrev" type="button" aria-label="上一頁">◀</button>
+  <span id="pos"></span>
+  <button id="bNext" type="button" aria-label="下一頁">▶</button>
+  <span id="cur"></span>
+  <button id="bToc" type="button">目錄</button>
+  <button id="bFs" type="button">全螢幕</button>
+</div>
+
+<script src="assets.js"></script>
+<script>
+(function(){
+const QR=window.QR||{}, YT=window.YT||{};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+function qrSvg(key,px){const q=QR[key];if(!q)return'';const n=q.m.length;let d='';q.m.forEach((r,y)=>{for(let x=0;x<n;x++)if(r[x]==='1')d+='M'+x+' '+y+'h1v1h-1z';});
+  return '<span class="qr"><svg width="'+px+'" height="'+px+'" viewBox="0 0 '+n+' '+n+'" shape-rendering="crispEdges" role="img" aria-label="QR Code"><rect width="'+n+'" height="'+n+'" fill="#fff"/><path d="'+d+'" fill="#000"/></svg></span>';}
+// image from the original deck / illustration card / own clip / YouTube card / link QR
+const I=(n,cap,h)=>'<figure class="fig"><img loading="lazy" src="img/p'+n+'.jpg" alt="'+esc(cap||'')+'" style="max-height:'+(h||400)+'px">'+(cap?'<figcaption>'+cap+'</figcaption>':'')+'</figure>';
+const C=(n,cap,h)=>'<figure class="fig"><img loading="lazy" src="img/c-'+n+'.jpg" alt="'+esc(cap||'')+'" style="max-height:'+(h||400)+'px">'+(cap?'<figcaption>'+cap+'</figcaption>':'')+'</figure>';
+const V=(n,cap,h)=>'<figure class="fig"><video controls playsinline preload="none" poster="vid/v'+n+'.jpg" src="vid/v'+n+'.mp4" style="max-height:'+(h||400)+'px"></video>'+(cap?'<figcaption>'+cap+'</figcaption>':'')+'</figure>';
+const Y=(id,zh,qs)=>{const m=YT[id]||{t:id,c:''};return '<a class="yt" href="https://youtu.be/'+id+'" target="_blank" rel="noopener"><span class="th"><img loading="lazy" src="img/yt/'+id+'.jpg" alt=""></span><span class="tx"><span class="tt">'+esc(zh||m.t)+'</span><span class="ch">YouTube｜'+esc(m.c)+'</span><span class="u">youtu.be/'+id+'</span></span>'+qrSvg('yt_'+id,qs||96)+'</a>';};
+const L=(key,name,px)=>{const q=QR[key];return '<a class="qrb" href="'+q.u+'" target="_blank" rel="noopener">'+qrSvg(key,px||200)+'<span class="n">'+name+'</span><span class="u">'+q.u.replace(/^https?:\/\//,'')+'</span></a>';};
+const Qz=(opts,ok,ans)=>'<div class="quiz"><div class="opts">'+opts.map((o,i)=>'<button type="button" class="opt" data-ok="'+(i===ok?1:0)+'">'+o+'</button>').join('')+'</div><div class="ans" hidden>'+ans+'</div></div>';
+const SRC=s=>'<div class="src">'+s+'</div>';
+
+/* ---------- top-view wheelchair diagrams ---------- */
+function chair(x,y,rot,opt){opt=opt||{};
+  return '<g transform="translate('+x+' '+y+') rotate('+rot+')">'
+  +'<rect x="-70" y="-6" width="13" height="74" rx="6" fill="#47666C"/><rect x="57" y="-6" width="13" height="74" rx="6" fill="#47666C"/>'
+  +'<rect x="-44" y="-44" width="88" height="88" rx="8" fill="#CFDDE0" stroke="#12343B" stroke-width="3"/>'
+  +'<rect x="-48" y="44" width="96" height="13" rx="5" fill="#12343B"/>'
+  +(opt.nearOff?'<rect x="-56" y="-36" width="11" height="76" rx="5" fill="none" stroke="#47666C" stroke-width="2.5" stroke-dasharray="6 5"/>':'<rect x="-56" y="-36" width="11" height="76" rx="5" fill="#12343B"/>')
+  +'<rect x="45" y="-36" width="11" height="76" rx="5" fill="'+(opt.farHi?'#E8552D':'#12343B')+'"/>'
+  +(opt.footOff?'':'<rect x="-40" y="-74" width="30" height="16" rx="4" fill="#47666C"/><rect x="10" y="-74" width="30" height="16" rx="4" fill="#47666C"/>')
+  +'<path d="M-9 -30 L0 -40 L9 -30" fill="none" stroke="#028090" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
+  +'</g>';}
+function topView(kind){
+  const bed='<rect x="24" y="24" width="226" height="432" rx="10" fill="#E4F2F4" stroke="#12343B" stroke-width="3"/><rect x="48" y="40" width="178" height="70" rx="12" fill="#FFFFFF" stroke="#CFDDE0" stroke-width="3"/><text x="137" y="420" text-anchor="middle" font-size="26" font-weight="700" fill="#47666C">床</text>';
+  const person='<rect x="232" y="178" width="78" height="20" rx="10" fill="#F4A93C"/><rect x="232" y="214" width="78" height="20" rx="10" fill="#F4A93C"/><ellipse cx="318" cy="188" rx="15" ry="10" fill="#12343B"/><ellipse cx="318" cy="224" rx="15" ry="10" fill="#12343B"/><ellipse cx="222" cy="206" rx="26" ry="46" fill="#F4A93C" stroke="#12343B" stroke-width="3"/><circle cx="222" cy="206" r="20" fill="#FFFFFF" stroke="#12343B" stroke-width="3"/>';
+  const mk='<defs><marker id="ar-'+kind+'" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8552D"/></marker></defs>';
+  if(kind==='a'){
+    return '<svg viewBox="0 0 620 480" width="100%" style="max-height:440px" role="img" aria-label="輪椅與床夾 30 到 45 度的俯視圖">'+mk+bed
+    +'<line x1="250" y1="250" x2="250" y2="470" stroke="#E8552D" stroke-width="3" stroke-dasharray="7 6"/>'
+    +chair(352,352,38,{farHi:true})
+    +'<path d="M250 440 A 120 120 0 0 0 322 452" fill="none" stroke="#E8552D" stroke-width="3"/>'
+    +'<text x="268" y="474" font-size="24" font-weight="900" fill="#E8552D">30–45°</text>'
+    +person
+    +'<path d="M262 250 Q 270 315 322 338" fill="none" stroke="#E8552D" stroke-width="5" marker-end="url(#ar-a)"/>'
+    +'<line x1="468" y1="318" x2="418" y2="352" stroke="#E8552D" stroke-width="3"/><text x="474" y="312" font-size="23" font-weight="900" fill="#E8552D">抓對側扶手</text>'
+    +'<text x="350" y="150" font-size="22" font-weight="700" fill="#47666C">好邊靠近輪椅</text><text x="350" y="180" font-size="22" font-weight="700" fill="#47666C">轉身約 45–60°</text>'
+    +'<ellipse cx="392" cy="214" rx="11" ry="20" fill="none" stroke="#028090" stroke-width="3" transform="rotate(-70 392 214)"/><ellipse cx="404" cy="252" rx="11" ry="20" fill="none" stroke="#028090" stroke-width="3" transform="rotate(-70 404 252)"/><text x="424" y="240" font-size="21" font-weight="700" fill="#028090">照顧者站患側前方</text>'
+    +'</svg>';
+  }
+  return '<svg viewBox="0 0 620 480" width="100%" style="max-height:440px" role="img" aria-label="輪椅貼著床邊的俯視圖">'+mk+bed
+    +chair(325,352,0,{footOff:true})
+    +person
+    +'<path d="M250 256 Q 262 300 300 322" fill="none" stroke="#E8552D" stroke-width="5" marker-end="url(#ar-b)"/>'
+    +'<text x="408" y="356" font-size="23" font-weight="900" fill="#E8552D">輪椅貼床 0°</text><text x="408" y="386" font-size="21" font-weight="700" fill="#47666C">腳靠掀開或拆下</text><text x="408" y="414" font-size="21" font-weight="700" fill="#47666C">距離最短、不用站直</text>'
+    +'<ellipse cx="372" cy="172" rx="11" ry="20" fill="#028090" transform="rotate(-80 372 172)"/><ellipse cx="408" cy="262" rx="11" ry="20" fill="#028090" transform="rotate(-40 408 262)"/>'
+    +'<path d="M392 190 L404 236" fill="none" stroke="#028090" stroke-width="3" stroke-dasharray="5 5"/>'
+    +'<text x="400" y="150" font-size="22" font-weight="900" fill="#028090">照顧者弓箭步</text><text x="430" y="216" font-size="20" font-weight="700" fill="#028090">重心從這腳</text><text x="430" y="242" font-size="20" font-weight="700" fill="#028090">移到那腳</text>'
+    +'</svg>';
+}
+
+/* ---------- slides ---------- */
+const SL=[];let sec='';
+const SEC=(no,name,sub)=>{sec=name;SL.push({sec,title:name,cls:'sect',raw:'<div class="no">'+no+'</div><h1>'+name+'</h1><p>'+sub+'</p>'});};
+const S=(title,body,o)=>SL.push(Object.assign({sec,title,body},o||{}));
+
+sec='開場';
+SL.push({sec,title:'封面',cls:'cover',raw:
+ '<div class="row mid"><div class="col f3" style="gap:26px"><div class="chip" style="align-self:flex-start">伊甸南投耆福長照機構｜長照人員在職訓練</div>'
+ +'<h1>安全<em>移轉位</em>技巧<br>與實務演練</h1>'
+ +'<div class="lg">11 月 14 日（六）13:00–17:00｜南投市</div>'
+ +'<div class="sm">講師　鍾孟修 職能治療師｜愛迪樂居家職能治療所</div></div>'
+ +'<div class="col f2 ctr">'+I(1,'',560)+'</div></div>'});
+
+S('講師｜鍾孟修 職能治療師','<div class="row"><div class="col f1 ctr">'+I(2,'',640)+'</div><div class="col f2 ctr">'
+ +'<ul class="pts"><li>愛迪樂有限公司 執行長（105/08 成立）</li><li>愛迪樂居家職能治療所 職能治療師所長</li><li>愛迪樂物理治療所 主管</li><li>愛迪樂新北、台中長期照顧服務機構 主管</li><li>關懷小丑協會 監事</li><li>Homeseen 失智症遊戲包 共同創辦人</li></ul>'
+ +'<div class="box"><p class="sm">銀髮體適能教練｜皮拉提斯教練｜認知桌遊活動設計師｜MAT 功能性評估國際認證</p></div></div></div>');
+
+S('今天四小時怎麼走','<div class="row"><div class="col f3 ctr"><div class="tl">'
+ +'<div class="tm">13:00–13:40</div><div><b>觀念</b>　為什麼會受傷、零抬舉、復能轉移位與協助轉移位</div>'
+ +'<div class="tm">13:40–14:10</div><div><b>保護自己</b>　髖鉸鍊、彎一腳直一腳、弓箭步（全員站起來練）</div>'
+ +'<div class="tm">14:10–15:00</div><div><b>床上移動、翻身到坐起</b>　示範後分組練</div>'
+ +'<div class="tm br">15:00–15:10</div><div class="br">休息</div>'
+ +'<div class="tm">15:10–16:10</div><div><b>床到輪椅</b>　角度怎麼擺、復能版、協助版、特殊轉移位技巧（分組演練）</div>'
+ +'<div class="tm">16:10–16:40</div><div><b>站走、輪椅下滑、推輪椅、上下車</b></div>'
+ +'<div class="tm">16:40–17:00</div><div><b>預防痠痛運動、資源、提問</b></div></div></div>'
+ +'<div class="col f1 ctr"><div class="box a"><h3 style="color:var(--ink)">今天的學員</h3><p class="sm" style="color:var(--ink)">居服員、日照照服員、居督、A 個管、日照社工、護理師、交通接送司機，60–70 人。</p></div><div class="box"><p class="sm" style="color:var(--ink)">演練 3 人一組：個案、照顧者、觀察員，每項技巧輪一次。</p></div></div></div>');
+
+S('八大重點，照「一天的動線」走一遍','<div class="road">'
+ +[[23,'觀念','零抬舉'],[36,'保護自己','安全注意事項'],[55,'第 1 站','床面上轉位'],[64,'第 2 站','翻身到坐起'],[70,'第 3 站','床到輪椅'],[84,'第 4 站','輪椅到站走'],[92,'第 5 站','輪椅下滑處理'],[101,'第 6 站','推輪椅、上下車']].map(a=>'<div class="st"><img loading="lazy" src="img/p'+a[0]+'.jpg" alt=""><div><div class="n">'+a[1]+'</div><div class="w">'+a[2]+'</div></div></div>').join('')
+ +'</div><div class="row"><div class="box f1"><h3>先想「人」</h3><p>他能自己做多少？我要補多少？</p></div><div class="box o f1"><h3>再想「我」</h3><p>腰打直、用腿、用體重，不用腰和手臂硬拉。</p></div><div class="box a f1"><h3 style="color:var(--ink)">最後想「環境」</h3><p>床高、輪椅角度、扶手腳靠、輔具。</p></div></div>'
+ +'<div class="key">原簡報的八大重點都在，順序改成個案從<b>躺 → 坐 → 轉到輪椅 → 站走 → 出門</b>。</div>');
+
+/* ===== A ===== */
+SEC('第一部分','為什麼要學轉移位','照顧工作最常受傷的地方，是自己的腰和肩。');
+S('職業病統計：一半以上是肌肉骨骼問題','<div class="row"><div class="col f3 ctr">'+I(11,'',600)+'</div><div class="col f2 ctr"><div class="xl o-t">58%</div><div class="lg">手臂肩頸疾病 46%<br>＋職業性下背痛 12%</div><p>轉移位是每天重複幾十次的動作，一次做錯不會怎樣，天天做錯就會。</p></div></div>');
+S('猜猜看：哪一個是腰痛最常見的原因？','<div class="row"><div class="col f1 ctr">'+Qz(['1. 椎間盤突出','2. 脊椎側彎','3. 肌肉拉傷','4. 骨刺'],2,'<b>肌肉拉傷，約 70%。</b>椎間盤與小面關節退化 10%、椎間盤突出 4%、椎間孔狹窄 3%。')+'<p class="sm">點選項看答案。</p></div><div class="col f1 ctr">'+I(13,'關於腰痛的幾個迷思（圖：阿舟物理治療）',520)+'</div></div>');
+S('你是不是天生關節比較鬆？','<div class="row"><div class="col f3 ctr">'+I(14,'',600)+'</div><div class="col f2 ctr"><div class="box"><h3>Beighton 評分（滿分 9 分）</h3><ul class="pts"><li>A 小指後扳超過 90°（左右各 1 分）</li><li>B 拇指碰到前臂（左右各 1 分）</li><li>C 手肘過伸超過 10°（左右各 1 分）</li><li>D 膝蓋過伸超過 10°（左右各 1 分）</li><li>E 膝蓋打直彎腰、手掌貼地（1 分）</li></ul></div><p>關節鬆的人更容易拉傷，更需要靠技巧和肌力保護自己。現場一起測。</p>'+SRC('圖：The Ehlers-Danlos Society，The Beighton Scoring System')+'</div></div>');
+S('長期有運動，就能預防腰痛嗎？','<div class="row"><div class="col f2 ctr">'+Qz(['1. 運動當然能有效預防腰痛','2. 運動應該不太能預防腰痛','3. 有些有、有些不行'],2,'<b>要看做的是什麼運動、做得夠不夠。</b>基本量：每週 150 分鐘中等強度有氧，加上每週至少 2 天肌力訓練。課程最後會帶核心運動。')+'</div><div class="col f3 ctr">'+I(21,'成人身體活動最低量建議（Move Your Way，美國衛生及公共服務部）',470)+'</div></div>');
+S('腰痛發生了，會自己好轉嗎？','<div class="row"><div class="col f1 ctr">'+Qz(['會','不會'],0,'<b>大多數會慢慢好轉。</b>但<b>超過四個月沒好轉就要就醫</b>。')+'</div><div class="col f1 ctr"><div class="box o"><h3>這些情況不要等</h3><ul class="pts o"><li>腳麻、腳無力越來越明顯</li><li>大小便控制出問題</li><li>發燒、半夜痛醒、休息也不會緩解</li><li>跌倒或撞擊之後才開始痛</li></ul><p class="sm" style="margin-top:8px">補充：以上是一般建議盡快就醫的警訊。</p></div></div></div>');
+S('坐著和站著，哪一個腰椎壓力比較大？','<div class="row"><div class="col f2 ctr">'+Qz(['坐','站'],0,'<b>坐著比站著大。</b>站立當 100：坐正 140、坐著前傾 185、<b>彎腰搬東西 220、坐著彎腰搬 275</b>，平躺只有 25。')+'<div class="box"><p>轉移位剛好就是「彎腰＋負重」。所以今天所有技巧都在做一件事：<b>不要彎著腰出力</b>。</p></div></div><div class="col f3 ctr">'+I(22,'各種姿勢下的腰椎間盤壓力（站立＝100）',560)+'</div></div>');
+
+/* ===== B ===== */
+SEC('第二部分','核心觀念','零抬舉、復能轉移位與協助轉移位、怎麼選方法。');
+S('零抬舉 No-Lift Policy','<div class="row"><div class="col f1 ctr"><p>一套符合人體工學的安全照護觀念和做法，目的是避免工作職業傷害。</p><div class="box o"><h3>受傷的三個原因</h3><ul class="pts o"><li>人力難求</li><li>欠缺教育訓練</li><li>設備（輔具）不足</li></ul></div>'+I(24,'',170)+'</div><div class="col f1 ctr">'+I(25,'零抬舉三原則：鼓勵患者出力、水平取代垂直、善用輔具協助（圖：鄭凱文職能治療師）',520)+'</div></div>');
+S('什麼是「水平取代垂直」？','<div class="row"><div class="col f1 ctr">'+I(26,'扶手可掀開',380)+'</div><div class="col f1 ctr">'+I(27,'腳靠可掀開、可拆',380)+'</div><div class="col f1 ctr"><ul class="pts"><li>把人「抬起來」是垂直，最傷腰。</li><li>讓屁股「平移過去」是水平，省力很多。</li><li>扶手、腳靠能掀開，輪椅才能貼近床，中間沒有障礙。</li><li>床面和輪椅座面調到一樣高，或讓出發的那邊略高一點。</li></ul></div></div><div class="key">選輪椅先看：<b>扶手能不能掀、腳靠能不能掀</b>。</div>');
+S('<em>復能</em>轉移位 與 <em>協助</em>轉移位','<div class="vs">'
+ +'<div class="box"><h3>復能轉移位：讓個案自己來</h3><ul class="pts"><li><b>目的</b>：每一次移位都是訓練，把能力練回來。</li><li><b>誰出力</b>：個案為主。照顧者給口令、引導方向、在旁保護。</li><li><b>擺位</b>：輪椅與床夾 30–45°，個案抓對側扶手自己轉。</li><li><b>適合</b>：聽得懂指令、腳能撐一部分、坐得住。</li><li><b>代價</b>：比較花時間，要等他。</li></ul></div>'
+ +'<div class="box o"><h3>協助轉移位：照顧者帶著做</h3><ul class="pts"><li><b>目的</b>：安全、省力地把人移過去。</li><li><b>誰出力</b>：照顧者為主，個案能幫多少算多少。</li><li><b>擺位</b>：輪椅貼著床，卡膝，弓箭步重心轉移，或用輔具。</li><li><b>適合</b>：幾乎無法出力、無法配合、當天狀況不好。</li><li><b>重點</b>：水平移動，不抬舉。</li></ul></div></div>'
+ +'<div class="key">不是二選一。同一位長輩，<b>早上有精神用復能，晚上累了用協助</b>，都對。</div>');
+S('復能怎麼做：做得到的不幫，做不到的才補','<div class="row"><div class="col f1 ctr"><ol class="steps"><li><b>先等 3–5 秒。</b>說完口令，給他時間反應。</li><li><b>一次說一步。</b>「腳往後收」「身體往前」「手抓扶手」。</li><li><b>只補他差的那一點。</b>差在站不起來，就補在骨盆；差在不敢轉，就站在患側。</li><li><b>補的越來越少。</b>這次出三分力，下次試兩分。</li></ol></div><div class="col f1 ctr"><div class="box"><h3>協助由少到多</h3><ol class="steps"><li>口頭提示</li><li>手勢、示範</li><li>輕觸引導方向</li><li>部分協助（補一點力）</li><li>完全協助</li></ol></div><p class="sm">補充：居家復能與日照的共同語言，寫紀錄時也可以用這五級描述。</p></div></div>');
+S('四種轉位方式：哪一個不是零抬舉？','<div class="row"><div class="col f1 ctr">'+Qz(['獨立轉位 Independent transfer','站立／蹲姿／坐姿軸轉位 Pivot transfer','滑板轉位 Sliding board transfer','依賴轉位 Dependent transfer'],3,'<b>依賴轉位</b>把人整個抱起來，不是零抬舉。前三種都有讓個案出力或用水平移動。')+'<div class="sm">由上到下：個案出力越來越少。前兩種偏復能，後兩種偏協助。</div></div><div class="col f1 ctr"><div class="g2">'+I(33,'站立／蹲姿／坐姿軸轉位',430)+I(32,'依賴轉位',430)+'</div></div></div>');
+S('動手之前，先問四個問題','<div class="row"><div class="col f1 ctr">'+C('assess-4q','',400)+'</div><div class="col f1 ctr">'+C('flowchart','',400)+'</div></div><div class="row" style="flex:none"><div class="box f1"><p><b>腳能撐住嗎？能配合口令嗎？坐得穩嗎？手有力氣嗎？</b>四題的答案決定用復能版還是協助版，以及要不要輔具或第二個人。</p></div>'+'<a class="qrb" href="'+QR.lib.u+'" target="_blank" rel="noopener" style="flex-direction:row;gap:16px;text-align:left">'+qrSvg('lib',120)+'<span><span class="n" style="display:block;font-size:22px">轉移位影片資料庫<br>有「先問四個問題」互動版</span></span></a></div>'+SRC('圖：鍾孟修〈轉移位技巧：不是比力氣，是比方法〉動畫'));
+S('記住三個不要','<div class="row"><div class="col f3 ctr">'+C('donts','',560)+'</div><div class="col f2 ctr"><div class="box o"><ul class="pts o"><li><b>不拉手臂</b>：肩膀容易拉傷、半脫位。</li><li><b>不從腋下抱</b>：壓迫腋下、傷肩。</li><li><b>不扭腰轉身</b>：照顧者閃到腰。</li></ul></div><div class="box"><ul class="pts"><li>兩腳打開、膝蓋彎、靠近長輩</li><li>用腳步轉、用腿出力</li></ul></div></div></div>');
+
+/* ===== C ===== */
+SEC('第三部分','保護自己：安全注意事項','髖鉸鍊、彎一腳直一腳、必要時穿護腰。');
+S('安全注意事項：三件事','<div class="g3" style="flex:1"><div class="box"><h3>1　髖鉸鍊 Hip hinge</h3><p>髖關節做屈曲和伸展，過程中脊柱保持挺直。彎的是髖，不是腰。</p></div><div class="box"><h3>2　彎一腳、直一腳</h3><p>鎖定髖關節，讓脊椎保持中立。弓箭步也有同樣效果。</p></div><div class="box"><h3>3　必要時穿護腰</h3><p>位置、鬆緊、時機、寬度都要對。髂嵴是關鍵。</p></div></div><div class="key">接下來三段都請大家<b>站起來一起做</b>。</div>');
+S('髖鉸鍊 Hip hinge：彎髖不彎腰','<div class="row"><div class="col f1 ctr">'+I(38,'Squat（深蹲）與 Hinge（髖鉸鍊）的差別',540)+'</div><div class="col f1 ctr"><ul class="pts"><li>後腦杓、上背、尾椎成一直線</li><li>核心穩定出力</li><li>臀大肌是主要出力肌群</li><li>後腳筋會有一點延展感</li><li>雙腳平均分配力量</li><li>膝蓋微彎</li></ul></div></div>');
+S('用一根棍子檢查自己','<div class="row"><div class="col f3 ctr">'+I(39,'抬頭 ✗　｜　頭、背、尾椎三點貼棍 ○　｜　凹下背 ✗',330)+'<div class="box"><p><b>現場練習</b>：兩人一組，用雨傘或長尺貼在背後，往前彎 10 次，三點都不能離開。</p></div></div><div class="col f1 ctr">'+V(1,'示範：穿滑布手套時，上半身成一直線',420)+'</div><div class="col f1 ctr">'+I(41,'洗碗也是髖鉸鍊（圖：聯新運醫）',420)+'</div></div>');
+S('彎一腳、直一腳，保護你的腰','<div class="row"><div class="col f1 ctr">'+I(43,'床邊照顧：一腳膝蓋彎起來跪在床上（畫面：大愛新聞 台日長照交流）',380)+'</div><div class="col f1 ctr">'+I(44,'一腳彎放置床，腰更直不傷腰',380)+'</div></div><div class="key">做照顧之前，別忘了<b>彎一腳膝蓋</b>：跪上床、踩矮凳、或前後站。</div>');
+S('生活上的應用，和它為什麼有效','<div class="row"><div class="col f1 ctr">'+I(46,'洗碗：一腳踩小凳',300)+'</div><div class="col f1 ctr">'+I(47,'一腳抬高時，骨盆不容易前傾，腰椎維持中立（圖：早安健康）',340)+'</div><div class="col f1 ctr">'+I(48,'平時做單腳、雙腳抱膝伸展，可以舒緩腰部不適',260)+'<div class="box"><p><b>弓箭步</b>也有同樣的保護效果，而且可以移動重心，轉移位會一直用到。</p></div></div></div>');
+S('弓箭步重心轉移：用體重帶人，不用腰拉人','<div class="row"><div class="col f1 ctr"><ol class="steps o"><li>兩腳前後站開，比肩寬一點，膝蓋微彎。</li><li>上半身維持髖鉸鍊的直線。</li><li>重心從一腳慢慢移到另一腳，手只是「掛」著個案。</li><li>腳尖朝向要去的方向，<b>用腳步轉，不扭腰</b>。</li></ol></div><div class="col f1 ctr"><div class="box o"><h3>全員練習 1 分鐘</h3><p>兩人面對面互抓前臂，一人弓箭步往後坐，把對方「帶」過來。感覺是腿在出力還是腰在出力。</p></div><div class="box"><p>補充：這是等一下「輪椅貼床」協助版的核心動作，方向要先想好：<b>重心移動的方向 ＝ 個案屁股要去的方向</b>。</p></div></div></div>');
+S('護腰怎麼穿','<div class="row"><div class="col f1 ctr">'+I(50,'',420)+'</div><div class="col f1 ctr"><table class="tb"><tr><th>位子</th><td>包住髂嵴（骨盆上緣），不要穿太高變成束腹。</td></tr><tr><th>鬆緊</th><td>貼身有支撐感，仍可順暢呼吸。</td></tr><tr><th>時機</th><td>搬移、出力的時候穿，休息時鬆開。</td></tr><tr><th>護腰寬度</th><td>後片夠寬，能撐住下背。</td></tr></table></div><div class="col f1 ctr">'+I(51,'髂嵴是關鍵：手叉腰摸到的那一圈骨頭',420)+'</div></div>');
+S('護腰和姿勢的迷思','<div class="row"><div class="col f1 ctr">'+I(52,'',300)+'<div class="box"><h3>長期穿戴會肌肉萎縮嗎？</h3><p>不會萎縮，但會有長期的心理依賴。</p></div></div><div class="col f1 ctr"><div class="box o"><h3>心理因素影響很大</h3><p>一直覺得「我的腰很脆弱」，反而更容易痛（反安慰劑效應）。</p></div><div class="xl t">動，還是關鍵。</div><p class="sm">沒有單一「正確」的姿勢；維持舒服的姿勢是安全的；脊椎很堅固，可以相信它。</p></div><div class="col f1 ctr">'+I(53,'打破姿勢的迷思',600)+SRC('Slater D, et al. "Sit Up Straight": Time to Re-evaluate. JOSPT 2019;49(8):562-564｜PAIN-ED 中文版')+'</div></div>');
+
+/* ===== D ===== */
+SEC('第 1 站','床面上轉位技巧','往上移、左右移。先請個案自己來，再用床和滑布幫忙。');
+S('床上移動：先問兩個狀況','<div class="row"><div class="col f1 ctr"><div class="box o"><h3>常見狀況</h3><ul class="pts o"><li>個案在床上往下滑了，怎麼辦？</li><li>個案不在床的正中央，怎麼辦？</li></ul></div></div><div class="col f1 ctr"><div class="box"><h3>復能版：個案能出力</h3><ul class="pts"><li>屈膝踩床、<b>移動腳、抬臀</b></li><li><b>手撐、手拉</b>床欄協助</li><li>善用扶手欄杆和三折照顧床</li></ul></div><div class="box o"><h3>協助版：個案依賴</h3><ul class="pts o"><li>善用滑布、移位板等輔具</li><li>兩人一起，不要一個人硬拉</li></ul></div></div></div>');
+S('善用三折照顧床','<div class="row"><div class="col f1 ctr">'+I(57,'三折床：升高頭、升高腳、升高床',300)+'<ul class="pts"><li><b>要坐起來</b>：先升腳、再升頭，屁股才不會往下滑。</li><li><b>要往上移</b>：頭放平、腳略升高，讓重力幫忙。</li><li><b>升高床面</b>到照顧者髖部附近，就不用彎腰。</li></ul></div><div class="col f1 ctr">'+V(4,'示範影片：三折照顧床的應用（3 分 59 秒）',470)+'</div></div>');
+S('床上往上移、左右平移','<div class="row"><div class="col f1 ctr">'+V(6,'特殊左右平移技巧（示範：鍾孟修）',520)+'</div><div class="col f2 ctr"><p><b>往上移</b>：個案屈膝踩床，照顧者固定腳掌，喊「一、二、三，屁股抬起來往上」。個案出不了力時，改用滑布。</p>'+Y('_ey9CAZAiGA','日本長期照護 轉移位 1/4：調整病患在床上的位置（國興衛視）')+Y('7wVNkms-kS0','長輩臥床床上移位教學：照顧者必知的安全技巧')+'<p class="sm">國興衛視《老師沒教的事》共四集，第 2、3 集連結放在最後的資源頁。</p></div></div>');
+S('移位滑布、移位滑墊','<div class="row"><div class="col f1 ctr">'+I(63,'床面上下左右移位',250)+I(65,'輔助翻身',250)+'</div><div class="col f1 ctr">'+I(73,'挑選時，滑布要涵蓋大部分身體面積：臀、肩、頭',290)+'<ul class="pts"><li>滑布把摩擦力降到很低，推的力氣只剩一點點。</li><li>鋪和抽都用翻身完成，不要抬人。</li></ul></div><div class="col f1 ctr">'+Y('gUgG0HS6wyk','移位滑布示範影片（成大醫院護理部製作）')+Y('arqG_2ftfOY','滑布：翻身、擺位與抽出（英國 OUH NHS）')+'</div></div>');
+S('滑墊＋固定帶，更省力也更安全','<div class="row"><div class="col f1 ctr">'+I(69,'省力向上移位',420)+'</div><div class="col f1 ctr">'+I(72,'省力側向拉動移位',420)+'</div></div><div class="key">拉的時候一樣用<b>弓箭步重心轉移</b>，手臂打直當繩子，不要用手臂彎曲去拉。</div>');
+S('床到床、床到仰躺式輪椅：硬式滑板與軟式滑板','<div class="row"><div class="col f2 ctr"><div class="g3">'+I(74,'平躺移位',230)+I(75,'硬式滑板',230)+I(76,'軟式滑板',230)+'</div><ol class="steps" style="flex-direction:row;flex-wrap:wrap;gap:12px 26px"><li>翻身</li><li>插入板子</li><li>躺平</li><li>推身體</li><li>抽出板子</li></ol><div class="box o"><p><b>注意中間的空隙</b>：空隙大用硬式，空隙小、床面等高可用軟式。</p></div></div><div class="col f1 ctr">'+I(77,'多人一起，用推的，不用抬的',360)+'</div></div>');
+
+/* ===== E ===== */
+SEC('第 2 站','翻身到坐起轉位技巧','翻身是所有床上照顧的第一步，也是最容易請個案自己做的一步。');
+S('協助翻身技巧','<div class="row"><div class="col f1 ctr">'+I(83,'',330)+'</div><div class="col f1 ctr"><ul class="pts"><li><b>減少底面積</b>：手抱胸、膝蓋彎起來。</li><li><b>增加上下肢力臂</b>：膝蓋立得越高越好推。</li><li><b>鼓勵患者自行出力</b>：頭先轉、手伸過去抓床欄。</li><li><b>善用輔具</b>：照顧床、床欄、翻身布。</li></ul>'+I(82,'',200)+'</div><div class="col f1 ctr">'+Y('7wVNkms-kS0','長輩臥床床上移位教學（含翻身）')+'<p class="sm">照顧者扶的是<b>肩膀和骨盆</b>，不是拉手。</p></div></div>');
+S('翻身方式：腰不舒服的人適合哪一種？','<div class="row"><div class="col f3 ctr">'+I(86,'',420)+'</div><div class="col f2 ctr">'+Qz(['木頭式翻身','分節式翻身'],0,'<b>木頭式翻身。</b>肩膀上肢和骨盆下肢一起翻，脊椎不扭轉，適合腰痛、脊椎術後。')+'<table class="tb"><tr><th>木頭式</th><td>肩膀上肢、骨盆下肢<b>一起翻</b></td></tr><tr><th>分節式</th><td>肩膀上肢、骨盆下肢<b>分階段翻</b>，比較省力</td></tr></table></div></div>');
+S('翻身要翻好側，還是患側？','<div class="g2" style="flex:1"><div class="box"><h3>純翻身</h3><p class="lg">翻向<b>患側</b>比較容易。</p><p>好手好腳在上面，可以自己推、自己勾。</p></div><div class="box o"><h3>要鼓勵個案獨立坐起</h3><p class="lg">翻向<b>好側</b>比較容易坐起。</p><p>但翻身這一步會比較有挑戰，因為要帶著患側翻過去。</p></div></div><div class="key">還要看環境：<b>照顧床有沒有靠牆</b>，決定了他只能從哪一邊下床。</div>');
+S('翻身坐起：翹翹板原理','<div class="row"><div class="col f1 ctr">'+I(88,'',430)+'</div><div class="col f1 ctr"><ul class="pts"><li><b>腳先下床</b>，腳的重量往下，上半身就容易起來。</li><li>照顧者一手在<b>肩頸部</b>提供支持。</li><li>一手在<b>骨盆部</b>提供協助，往下壓。</li><li>鼓勵個案<b>用手臂撐床</b>。</li></ul>'+I(87,'',170)+'</div><div class="col f1 ctr">'+I(89,'',300)+Y('m0ZQBZpjmxc','協助銀髮族長輩下床的方法')+'</div></div>');
+S('復能版：鼓勵個案自己翻身坐起','<div class="row"><div class="col f1 ctr"><ul class="pts"><li>好腳勾住患腳，一起帶下床。</li><li>好側在下方比較容易撐起來。</li><li><b>上身和床邊留距離</b>：距離夠，手臂才撐得起來。</li><li><b>下身和床邊留距離</b>：距離夠，腳才有地方放。</li></ul>'+I(93,'坐起小技巧：善用上半身的空間（示範：鍾孟修）',260)+'</div><div class="col f1 ctr">'+Y('1STmEXjv6ek','偏癱病人自己床上移位：往健側翻身、坐起（門諾醫院職能治療）')+Y('Y9Im3yBsBpk','偏癱病人自己床上移位：往患側翻身、坐起（門諾醫院職能治療）')+Y('WqmQtrr9TrI','科學性的移位技能 EP2：平躺到起身移至輪椅')+'</div></div>');
+S('坐起的輔具，和直接坐起的做法','<div class="row"><div class="col f1 ctr">'+I(95,'',220)+I(94,'起身拉繩',260)+'</div><div class="col f1 ctr">'+I(96,'自行臥床起身、移動患肢',220)+'<p class="sm">個案手有力時，拉繩、床欄都能讓他自己起來。</p></div><div class="col f1 ctr">'+I(97,'直接坐起的照顧轉位技巧',300)+'<div class="box"><p>善用照顧床，<b>先把頭部調高</b>，要補的角度就少一半。</p></div></div></div>');
+
+/* ===== F ===== */
+SEC('第 3 站','床到輪椅轉位技巧','今天的重點。先擺對角度，再決定用復能版還是協助版。');
+S('床到輪椅、輪椅到床：六個步驟','<div class="row"><div class="col f3 ctr"><ol class="steps"><li><b>擺輪椅</b>：個案好邊接近輪椅，剎車，與床面夾 0–45°，注意床的高度。</li><li><b>坐到床緣</b>：讓個案移動到邊緣，腳踩地。</li><li><b>預擺</b>：先把腳和骨盆擺到稍微偏向轉位方向。</li><li><b>穩定膝蓋</b>：膝蓋微彎、身體保持直立。卡雙膝、卡單壞、卡單好、不卡，或用膝蓋綁帶。</li><li><b>抓握</b>：照顧者抓肩胛骨、腰帶或褲頭；個案抓照顧者衣物、環抱，或抓支撐面、扶手。</li><li><b>弓箭步</b>：重心轉移，注意方向。</li></ol></div><div class="col f2 ctr">'+C('setup-top','',330)+'<div class="box a"><p class="sm" style="color:var(--ink)">反過來從輪椅回床，步驟一樣，方向相反，一樣讓好邊靠近目的地。</p></div></div></div>');
+S('輪椅跟床：<em>30–45 度</em>，還是<em>貼著</em>？','<div class="vs">'
+ +'<div class="col"><div class="box" style="padding:12px 22px"><h3 style="margin:0">個案有能力：夾 30–45°</h3></div>'+topView('a')+'<p class="sm" style="margin:0">能撐起屁股、手能<b>抓住對面的扶手</b>。他自己轉，你保護。這是<b>復能轉移位</b>。</p></div>'
+ +'<div class="col"><div class="box o" style="padding:12px 22px"><h3 style="margin:0">幾乎都要你幫忙：輪椅貼著床</h3></div>'+topView('b')+'<p class="sm" style="margin:0">沒有能力站、抓不住扶手。輪椅貼床，照顧者用<b>弓箭步</b>把人平移過去。這是<b>協助轉移位</b>。</p></div></div>'
+ +'<div class="key">兩個都對，看人。判斷只要一句：<b>他抓得到對面扶手、撐得起屁股嗎？</b></div>');
+S('為什麼這樣分？','<div class="row"><div class="col f1"><table class="tb"><tr><th></th><th>夾 30–45°</th><th>輪椅貼床（0°）</th></tr><tr><th>個案能力</th><td>能站或半站、能抓握、聽得懂口令</td><td>站不起來、無法抓握或無法配合</td></tr><tr><th>誰出力</th><td>個案為主</td><td>照顧者為主</td></tr><tr><th>為什麼</th><td>對側扶手剛好在伸手可及的地方；腳有踩步轉身的空間；只需要轉小半圈</td><td>屁股移動的距離最短；不必站直，屁股離床一點就能平移；水平取代垂直</td></tr><tr><th>輪椅條件</th><td>一般輪椅就可以</td><td>扶手、腳靠最好能掀開</td></tr><tr><th>照顧者</th><td>站患側前方，口令加保護</td><td>卡膝、抓腰帶，弓箭步重心轉移</td></tr></table></div><div class="col ctr" style="flex:0 0 640px"><div class="g2">'+I(28,'',270)+I(29,'',270)+I(31,'',270)+I(30,'',270)+'</div><p class="sm">看圖討論：這四張各是哪一種擺法？為什麼？</p></div></div>');
+S('第一步：怎麼協助坐到床緣','<div class="row"><div class="col f1 ctr">'+I(100,'臀部一邊一邊往前移',420)+'</div><div class="col f1 ctr"><div class="box"><h3>手協助推拉</h3><p>一手在骨盆後方往前帶，一手在對側膝蓋往後推，注意身體方向和手推拉的方向相反。</p></div><div class="box"><h3>左右擺盪法</h3><p>身體先倒向左邊，右邊屁股變輕就往前挪；再換邊。像「屁股走路」。</p></div>'+Y('YavQPtwSk2I','減少腰部負擔的各種轉位方法（日本，產業保健物理治療）')+'</div></div>');
+S('頭超過腳尖，個案才能幫你出力','<div class="row"><div class="col f1 ctr">'+I(103,'坐到站：身體前傾，頭過腳尖，屁股才離得開椅面',420)+'</div><div class="col f1 ctr">'+I(104,'○ 個案有前傾｜✗ 個案沒前傾，照顧者的腰負擔大',420)+'</div></div><div class="key">口令：「腳往後收、<b>鼻子超過腳尖</b>、屁股翹起來。」</div>');
+S('復能版：個案情況較佳時的站立軸轉位','<div class="row"><div class="col f1 ctr">'+C('pivot-lean','',300)+C('pivot-turn','',300)+'</div><div class="col f1 ctr"><div class="box"><h3>兩個重點</h3><ul class="pts"><li>個案<b>抓住對側扶手</b>。</li><li>照顧者<b>站在患側</b>保護、引導。</li></ul></div><p>口令一次一步：腳往後收 → 身體往前 → 手抓對面扶手 → 屁股離床 → 小步轉 → 摸到椅子再慢慢坐。</p>'+Y('aqQdc4vCHlE','協助長輩從床移位到輪椅：站姿移位法（康揚輔具）')+Y('MkWIMZyYyXk','蹲姿與站姿軸轉位 Squat and Stand Pivot Transfer（Craig Hospital）')+'</div></div>'+SRC('原簡報此頁的短網址已失效，改放兩支內容相同主題、可正常播放的影片。'));
+S('中風偏癱：輪椅放健側','<div class="row"><div class="col f3 ctr">'+C('hemi-top','',520)+'</div><div class="col f2 ctr"><ul class="pts"><li>輪椅放在<b>健側</b>，用好手、好腳出力，轉身更順。</li><li>照顧者護住<b>患側膝蓋</b>。</li><li><b>千萬別拉患側手</b>，肩膀容易半脫位、疼痛。</li></ul><div class="box a"><p class="sm" style="color:var(--ink)">回程（輪椅到床）也一樣：調整輪椅方向，讓健側靠近床。</p></div></div></div>');
+S('預先把腳和骨盆擺到偏轉位的位置','<div class="row"><div class="col f1 ctr">'+V(8,'示範影片：先擺腳、再轉位',560)+'</div><div class="col f2 ctr"><ul class="pts"><li>靠近輪椅的那隻腳往前半步，另一隻腳往後。</li><li>骨盆先轉向輪椅一點，等一下要轉的角度就更小。</li><li>腳沒先擺好，轉到一半會<b>絞在一起</b>，這是最常見的跌倒原因。</li></ul><div class="key">先擺腳，再起身。</div></div></div>');
+S('膝蓋要不要卡？卡哪一邊？','<div class="row"><div class="col f1 ctr">'+I(107,'卡單膝（片膝）與卡雙膝（兩膝）',400)+'</div><div class="col f1 ctr"><table class="tb"><tr><th>卡雙膝</th><td>兩腳都沒力，照顧者用雙膝夾住</td></tr><tr><th>卡單壞</th><td>只穩定沒力的那隻腳</td></tr><tr><th>卡單好</th><td>現場示範討論：什麼情況會卡好腳？</td></tr><tr><th>不卡</th><td>個案兩腳都撐得住，只需保護</td></tr><tr><th>膝蓋綁帶</th><td>用輔具固定雙膝，照顧者的腳空出來</td></tr></table><div class="box o"><p><b>討論題</b>：只卡一邊膝蓋時，應該穩定靠近輪椅那一側，還是另外一側？</p></div></div><div class="col" style="flex:0 0 330px;justify-content:center">'+I(108,'',250)+I(110,'',250)+'</div></div>');
+S('蹲姿或站立軸心轉位','<div class="row"><div class="col f3 ctr">'+I(109,'膝蓋微彎、身體保持直立；個案不必站到全直',520)+'</div><div class="col f2 ctr"><ul class="pts"><li><b>站立軸轉</b>：個案站得起來，轉身坐下。</li><li><b>蹲姿軸轉</b>：站不直沒關係，屁股離開床面、半蹲著轉過去。</li><li>照顧者抓腰帶或褲頭，重心壓低，和個案一起移動。</li></ul>'+Y('MkWIMZyYyXk','How to Do a Squat and Stand Pivot Transfer（Craig Hospital）')+'</div></div>');
+S('協助版：輪椅貼床＋弓箭步','<div class="row"><div class="col f1 ctr">'+topView('b')+'</div><div class="col f1 ctr"><ol class="steps o"><li>扶手、腳靠能掀就掀開，<b>輪椅貼著床</b>，剎車。</li><li>個案坐到床緣，腳踩地，靠輪椅的腳在前。</li><li>照顧者卡膝，抓腰帶或褲頭，個案上身靠在照顧者肩側。</li><li>讓個案<b>頭過腳尖</b>，屁股離床一點點就好，不必站直。</li><li>照顧者<b>弓箭步</b>，重心從遠離輪椅的腳移到靠近輪椅的腳，把屁股水平帶到座面。</li><li>坐下後再調整坐深。</li></ol></div></div><div class="key">不是抱起來再放下，是<b>讓屁股沿著水平線滑過去</b>。</div>');
+S('輔具：旋轉盤','<div class="row"><div class="col f3 ctr">'+I(113,'旋轉盤：雙膝固定，轉位省力又安全',330)+'<ul class="pts"><li>個案腳踩在轉盤上，站起後整個人跟著盤轉，不用踩步。</li><li>適合能撐住體重、但腳步踩不出去的個案。</li><li>照顧者要固定雙膝，避免轉太快。</li></ul></div><div class="col f2 ctr">'+I(114,'',200)+Y('PbyM5cQ7KCk','移位小幫手：移位轉盤使用方式')+'</div></div>');
+S('輔具：移位板，坐姿軸心轉位','<div class="row"><div class="col f1 ctr">'+I(119,'',260)+I(118,'轉移位上床',240)+'</div><div class="col f1 ctr">'+I(122,'坐姿軸轉位 Sit-Pivot Transfer',330)+'<div class="box"><p><b>平移移位，省力又安全。</b>手有力、坐得穩的個案可以自己來，是輪椅使用者最重要的獨立技巧。</p></div></div><div class="col f1 ctr">'+I(120,'上下車、椅子之間也能用',260)+Y('Zne6RFIlrpc','坐姿平移 移位法（瞭輔具）')+'</div></div>');
+
+/* ===== G ===== */
+SEC('進階','特殊轉移位技巧','個案幾乎無法出力時的協助版做法。都是水平移動，不是抱起來。');
+S('五種特殊轉移位技巧','<div class="g5" style="flex:1">'
+ +[['椅子轉位法','照顧者坐在椅子上，把個案的身體放在自己大腿上帶過去。',124],['人體蹺蹺板','個案上身前傾趴在照顧者身上，屁股自然翹起。',126],['雙腰帶','兩條帶子分別帶骨盆，照顧者手不用彎腰去抓。',127],['身體支點','用骨盆側、鎖骨附近、肩或腋三點支撐。',130],['照顧型轉位','減少腰部負擔的各種協助做法總整理。',129]].map(a=>'<div class="box w" style="display:flex;flex-direction:column;gap:10px;padding:16px"><h3 style="font-size:28px">'+a[0]+'</h3><img loading="lazy" src="img/p'+a[2]+'.jpg" alt="" style="width:100%;height:330px;object-fit:cover;border-radius:6px"><p class="sm">'+a[1]+'</p></div>').join('')
+ +'</div><div class="key">共同原則：<b>個案上身前傾、重心到腳上、屁股沿水平線移動</b>。先看影片，再分組試。</div>');
+S('椅子轉位法（依賴型）','<div class="row"><div class="col f1 ctr">'+I(123,'利用右手把臀部抬起來',380)+'</div><div class="col f1 ctr">'+I(124,'慢慢坐回自己的椅子上',380)+'</div><div class="col f1 ctr"><ul class="pts"><li>照顧者坐著做，腰不用彎。</li><li>個案上身趴在照顧者大腿與肩上。</li><li>用照顧者身體的轉動帶個案過去。</li></ul>'+Y('lTtDY2vXpC4','日本長期照護 轉移位 4/4（國興衛視 老師沒教的事）')+'</div></div>'+SRC('畫面：國興衛視《老師沒教的事：長期照護方法大公開》'));
+S('人體蹺蹺板（依賴型）','<div class="row"><div class="col f3 ctr">'+I(126,'',470)+'</div><div class="col f2 ctr"><ul class="pts"><li>照顧者坐在個案旁邊或半蹲在前方。</li><li>個案上身前傾，重量放在照顧者背上或肩上。</li><li>頭往下，屁股就往上，像蹺蹺板。</li><li>屁股離床後，水平轉到輪椅。</li></ul>'+Y('YavQPtwSk2I','減少腰部負擔的各種轉位方法（日本）')+'</div></div>');
+S('雙腰帶轉移位技巧（依賴型）','<div class="row"><div class="col f3 ctr">'+I(127,'',500)+'</div><div class="col f2 ctr"><ul class="pts"><li>帶子繞過個案骨盆下方，照顧者抓帶子，不用彎腰去抓褲頭。</li><li>照顧者身體往後坐，個案就被帶起來。</li><li>一樣要卡膝、頭過腳尖。</li></ul>'+Y('jDkzzJeJ-Qc','好神帶｜幫幫移位系列（JUST4U 強生醫療儀器）')+'</div></div>');
+S('身體支點轉移位技巧：一定用三點支撐','<div class="row mid"><div class="col f1 ctr">'+I(129,'',400)+'</div><div class="col f1 ctr">'+I(130,'三點支撐',400)+'</div><div class="col f1 ctr">'+I(131,'個案軀幹較軟時：骨盆側、鎖骨附近、肩或腋',300)+'<ul class="pts"><li>① 骨盆側　② 另一側骨盆　③ 上背或肩胛</li><li>軀幹軟的個案：改撐鎖骨附近與肩、腋，避免往前倒。</li></ul></div></div>'+SRC('畫面：日本介護技術教學影片（產業保健の理学療法）'));
+S('照顧型轉位技巧總整理，和日本轉移位資料庫','<div class="row"><div class="col f1 ctr">'+Y('YavQPtwSk2I','減少腰部負擔的各種轉位方法（日本）',130)+Y('aLPXgRCxzmA','別再用抱的！輪椅移位超省力不傷腰（健康 2.0 feat. 新北市輔具資源中心）',130)+'</div><div class="col f1 ctr"><div class="row mid" style="flex:none">'+I(34,'',330)+L('anxin','安心移位｜日本長照教學影片庫',210)+'</div><p class="sm">日本轉移位 YouTube 熱門影片，搭配中文翻譯重點，點選就能看。</p></div></div>');
+S('分組演練：床到輪椅','<div class="row"><div class="col f1"><div class="box"><h3>分組方式</h3><p>3 人一組：個案、照顧者、觀察員。每個情境做完就輪替。</p></div><div class="box a"><h3 style="color:var(--ink)">三個情境</h3><ol class="steps"><li><b>能站、能抓</b>：復能版，輪椅夾 30–45°，只給口令。</li><li><b>右側偏癱</b>：輪椅放健側，保護患側膝。</li><li><b>幾乎無法出力</b>：協助版，輪椅貼床，弓箭步。</li></ol></div></div><div class="col f1"><div class="box o" style="flex:1"><h3>觀察員檢核</h3><ul class="pts o"><li>輪椅剎車了嗎？角度對嗎？</li><li>個案腳踩穩、腳有先擺好嗎？</li><li>有說口令、有等個案嗎？</li><li>個案頭有過腳尖嗎？</li><li>照顧者是彎髖還是彎腰？</li><li>是用腳步轉，還是扭腰？</li><li>坐下時有沒有「摔」進輪椅？</li></ul></div></div></div>');
+
+/* ===== H ===== */
+SEC('第 4 站','輪椅到站走轉位技巧','坐到站是每天做最多次的訓練。');
+S('坐站訓練：兩種做法的差別','<div class="row"><div class="col f1"><div class="box" style="flex:1;display:flex;flex-direction:column;gap:10px"><h3>手撐椅子扶手站起來</h3>'+I(136,'',250)+'<ul class="pts"><li>動作較為<b>安全</b></li><li>下肢訓練效果差</li></ul></div></div><div class="col f1"><div class="box o" style="flex:1;display:flex;flex-direction:column;gap:10px"><h3>手扶前方、身體前傾站起來</h3>'+I(137,'',250)+'<ul class="pts o"><li>下肢訓練效果<b>好</b></li><li>動作較為挑戰</li></ul></div></div><div class="col f1 ctr">'+V(9,'示範：照顧者在前方牽引站起',230)+V(10,'示範：照顧者蹲在前方引導',230)+'</div></div><div class="key">撐扶手比較安全；<b>手往前、重心到腳上</b>，腿才真的在出力。現場兩種都試試看。</div>');
+S('坐到站、站到坐','<div class="row"><div class="col f1"><div class="box" style="padding:14px 20px"><h3 style="margin:0">坐到站</h3></div><div class="g2">'+I(141,'自己來',300)+I(140,'照顧者協助',300)+'</div><p class="sm">坐到椅緣 → 腳往後收、鼻子過腳尖 → <b>手撐椅子扶手站起來，不要拉助行器</b> → 站穩了再走。</p></div><div class="col f1"><div class="box o" style="padding:14px 20px"><h3 style="margin:0">站到坐</h3></div>'+I(142,'',300)+'<p class="sm">後退到小腿碰到椅子 → 身體前傾，一手往後摸扶手 → 慢慢坐，不要「摔」下去 → 往後坐深。</p></div></div>');
+S('髖關節或下肢手術患者的坐站','<div class="row"><div class="col f1 ctr">'+I(143,'站起來 Standing Up',470)+'</div><div class="col f1 ctr">'+I(144,'坐下去 Sitting Down',470)+'</div><div class="col" style="flex:0 0 400px;justify-content:center"><ul class="pts"><li>起身前，<b>手術那隻腳往前伸</b>，好腳往後收。</li><li>手撐椅子扶手起身，不要拉助行器。</li><li>坐下前一樣先把患腳往前滑。</li></ul><p class="sm">髖關節活動限制依手術方式不同，以醫師、治療師交代為準。</p></div></div>');
+S('腰帶真的好重要','<div class="row"><div class="col f1 ctr">'+I(149,'移位腰帶讓照顧者輕握著，就可以控制好個案重心',330)+'<div class="g2">'+I(147,'',150)+I(146,'',150)+'</div></div><div class="col f1 ctr">'+I(150,'站在斜後方，手輕握腰帶把手；有狀況時讓長輩靠在自己身上',430)+'</div><div class="col f1 ctr"><ul class="pts"><li><b>觀感、心理因素</b>：不用抓褲頭、不用抱。</li><li><b>安全好施力</b>：抓的是骨盆，就是重心。</li><li><b>避免肩頸手臂受傷</b>：個案和照顧者都是。</li></ul>'+Y('V0YH7atZ7Kk','移位腰帶 有夠厲害（瞭輔具）')+'</div></div>');
+S('跌倒了怎麼辦？','<div class="row"><div class="col f1 ctr"><div class="box o"><p><b>先檢查，別急著拉。</b>有沒有劇痛、頭暈、腳變形、撞到頭？有就不要動，打 119。</p></div><ol class="steps" style="flex-direction:row;flex-wrap:wrap;gap:10px 22px"><li>美人魚側坐</li><li>四足跪</li><li>單膝下跪</li><li>手撐椅子、腳出力</li></ol>'+C('floor-kneel','',260)+'</div><div class="col f1 ctr">'+I(151,'跌倒後自己起身的九個步驟（圖：Stay On Your Feet，西澳）',430)+'</div><div class="col f1 ctr">'+Y('dEdMk-P5dbY','跌倒後，如何從地上爬起來（自救篇）')+Y('ebyAdiuEm3k','跌倒後，如何從地上爬起來（助人篇）')+'<p class="sm">他人協助時是「引導」，搬兩張椅子，一張給他撐、一張給他坐。</p></div></div>');
+
+/* ===== I ===== */
+SEC('第 5 站','長輩輪椅下滑處理方式','先把人坐回去，再找出為什麼會滑。');
+S('長輩在輪椅上往下滑，怎麼辦？','<div class="row"><div class="col f1 ctr">'+C('slump-back','',380)+'</div><div class="col f1 ctr"><div class="box o"><ul class="pts o"><li>不要從腋下硬往上提。</li><li>抓個案<b>交叉的前臂</b>，先讓他<b>前傾</b>，再往後帶。</li><li>或左右擺盪，一邊一邊往後挪。</li></ul></div>'+Y('RcP_wUOSvWg','解決輪椅前滑的 5 招乾坤大挪移神功（瞭輔具）',120)+'<p class="sm">一直滑，要回頭檢查：座深太長？座墊太滑？腳踏板太高？骨盆帶位置？</p></div></div>');
+S('止滑坐墊，和骨盆帶的位置','<div class="row"><div class="col f1 ctr">'+I(156,'單向止滑坐墊：只能往後、不會往前',180)+I(155,'',220)+'</div><div class="col f1 ctr">'+I(157,'○ 正確的骨盆帶位置',400)+'</div><div class="col f1 ctr">'+I(159,'✗ 位置太高，固定效果差，容易前滑',400)+'</div></div><div class="key">骨盆帶要壓在<b>髂前上棘</b>下方、往後下方 45° 拉，不是綁在肚子上。</div>'+SRC('圖片來源：楊忠一《行動輔具怎麼選怎麼用》（2019）'));
+
+/* ===== J ===== */
+SEC('第 6 站','推輪椅與上下車','高低差、斜坡、縫隙，還有司機每天都要做的上下車。');
+S('推輪椅：前推、後推、翹起前推','<div class="row"><div class="col f1 ctr">'+I(167,'照顧者依不同環境，協助推輪椅的安全模式',640)+'</div><div class="col f1 ctr"><div class="g3"><div class="box"><h3>前推</h3><p class="sm">平地、上坡</p></div><div class="box"><h3>後推</h3><p class="sm">下陡坡、下平台、過縫隙</p></div><div class="box"><h3>翹起前推</h3><p class="sm">上平台、過門檻</p></div></div><div class="box o"><p><b>下坡、下平台用前推很危險</b>，個案會往前栽。倒退著下，照顧者在下方擋。</p></div><p class="sm">坡度小於 1:12（約 5 度）是緩坡，大於則是陡坡。</p></div></div>'+SRC('圖片來源：楊忠一《行動輔具怎麼選怎麼用》（2019）'));
+S('平台、門檻、縫隙','<div class="g3" style="flex:1;min-height:0"><div class="col"><div class="box" style="padding:10px 18px"><h3 style="margin:0">平台</h3></div>'+I(161,'上：翹起前推',230)+I(162,'下：後退',230)+'</div><div class="col"><div class="box" style="padding:10px 18px"><h3 style="margin:0">門檻</h3></div>'+I(163,'前進：翹起前輪',230)+I(164,'後退通過',230)+'</div><div class="col"><div class="box" style="padding:10px 18px"><h3 style="margin:0">縫隙</h3></div>'+I(165,'前進：翹起前輪',230)+I(166,'後退通過',230)+'</div></div>'+SRC('圖片來源：楊忠一《行動輔具怎麼選怎麼用》（2019）'));
+S('雙人手推輪椅上下樓梯','<div class="row"><div class="col f1 ctr">'+I(168,'',560)+'</div><div class="col f1 ctr"><ul class="pts"><li>輪椅後傾，後輪貼著階梯，一階一階滾。</li><li>後方的人主要出力，前方的人抓骨架（不是抓腳踏板）穩定方向。</li><li>先喊口令再動，每一階都停一下。</li></ul>'+Y('pePSC1tlL6I','輪椅手動上下樓梯操作教學：雙人協力（瞭輔具）',120)+'</div></div>'+SRC('圖片來源：楊忠一《行動輔具怎麼選怎麼用》（2019）'));
+S('猜猜看，這是什麼輔具？','<div class="row"><div class="col f1 ctr">'+I(171,'',300)+'</div><div class="col f1 ctr">'+I(175,'',400)+'</div><div class="col f1 ctr">'+I(174,'',300)+'</div></div>'+Qz(['看答案'],0,'<b>汽車安全扶手。</b>卡在車門鎖扣上當把手；另外還有掛在頭枕上的拉把、放在座椅上的旋轉座墊。'));
+S('上下車移位','<div class="row"><div class="col f1 ctr">'+I(173,'',600)+'</div><div class="col f1 ctr"><ol class="steps"><li>先把座椅往後移，騰出足夠的空間。</li><li>背對座椅後退，直到大腿後側碰到座椅。</li><li>一手扶儀表板、一手扶座椅，<b>屁股先坐</b>，把頭放低。</li><li>坐穩之後，再把腳一隻一隻收進車內。</li></ol><div class="box a"><p class="sm" style="color:var(--ink)"><b>給交通接送司機</b>：輪椅一樣夾 30–45° 靠近車門，剎車。下車順序相反：腳先出來踩穩，再起身。</p></div>'+Y('jN6fDjMdn0s','科學性的移位技能 EP3：由輪椅上下車（Jubo Care）')+'</div></div>');
+
+/* ===== K ===== */
+SEC('收尾','保養自己，帶走資源','照顧別人之前，先把自己的腰顧好。');
+S('預防痠痛的運動','<div class="row"><div class="col f1"><div class="box" style="padding:10px 18px"><h3 style="margin:0">抗彎曲：橋式、骨盆後傾</h3></div>'+V(11,'骨盆後傾',200)+V(12,'橋式',200)+'</div><div class="col f1"><div class="box" style="padding:10px 18px"><h3 style="margin:0">貓牛式、鳥狗式</h3></div>'+I(181,'貓牛式：反覆 5–10 次（圖：Heho 健康）',300)+I(182,'鳥狗式（圖：健康 2.0）',170)+'</div><div class="col f1"><div class="box" style="padding:10px 18px"><h3 style="margin:0">抗旋轉：Pallof Press</h3></div>'+I(183,'',240)+Y('nFspBRHke4w','Pallof Press 示範')+'<p class="sm">轉移位最怕扭腰，抗旋轉就是在練「不被扭走」。</p></div></div>');
+S('轉移位資料庫：回去還可以查','<div class="row mid"><div class="col f1 mid">'+L('lib','轉移位影片資料庫',230)+'<p class="sm" style="text-align:center">145 支影片，依情境、個案能力、人力篩選；有「先問四個問題」和輔具補助整理。</p></div><div class="col f1 mid">'+L('anxin','安心移位｜日本長照教學影片庫',230)+'<p class="sm" style="text-align:center">日本轉移位熱門影片，搭配中文重點。</p></div><div class="col f1 mid">'+L('fb','臉書｜鍾孟修 Matt 職能治療師',170)+L('ytch','YouTube｜鍾孟修 職能治療師',170)+'</div></div>');
+S('補充：移位輔具的長照補助','<div class="row"><div class="col f3"><table class="tb"><tr><th>代碼</th><th>項目</th><th>給付上限</th><th>年限</th></tr>'
+ +[['ED01','移位腰帶','1,500 元','3 年'],['ED02','移位板','2,000 元','5 年'],['ED03','人力移位吊帶','4,000 元','3 年'],['ED04','移位滑墊 A 款','3,000 元','5 年'],['ED05','移位滑墊 B 款','8,000 元','5 年'],['ED06','移位轉盤','2,000 元','3 年'],['ED07','移位機','購置 40,000 元；租賃每月 2,000 元','10 年'],['ED08','移位機吊帶','6,000 元','3 年']].map(r=>'<tr><td class="num">'+r[0]+'</td><td>'+r[1]+'</td><td class="num">'+r[2]+'</td><td class="num">'+r[3]+'</td></tr>').join('')
+ +'</table></div><div class="col f2 ctr"><div class="box"><ul class="pts"><li>輔具與居家無障礙額度：每 3 年 4 萬元。</li><li>部分負擔：一般戶 30%、中低收入戶 10%、低收入戶 0%。</li><li>申請窗口：各縣市長照管理中心，1966。</li></ul></div><p class="sm">依衛福部長照給付及支付基準整理，金額與規定以最新公告和南投縣輔具資源中心說明為準。</p></div></div>');
+S('更多延伸影片','<div class="g2" style="flex:1;align-content:center">'+Y('juSLVq6Kdv0','日本長期照護 轉移位 2/4（國興衛視）')+Y('uE44eK7gQPY','日本長期照護 轉移位 3/4（國興衛視）')+Y('WqmQtrr9TrI','科學性的移位技能 EP2：平躺到起身移至輪椅')+Y('aLPXgRCxzmA','別再用抱的！輪椅移位超省力不傷腰')+Y('m0ZQBZpjmxc','協助銀髮族長輩下床的方法')+Y('Zne6RFIlrpc','坐姿平移 移位法')+'</div>');
+S('今天帶走五句話','<ol class="steps" style="gap:16px;font-size:34px;font-weight:700;flex:1;justify-content:center"><li>做得到的不幫，做不到的才補。</li><li>有能力，輪椅夾 <span class="o-t">30–45°</span>、抓對側扶手；沒能力，輪椅<span class="o-t">貼床</span>、弓箭步。</li><li>頭過腳尖，屁股才起得來。</li><li>彎髖不彎腰，用腳步轉不扭腰。</li><li>水平取代垂直，能用輔具就用輔具。</li></ol><div class="key">謝謝大家。有問題現在問，或到臉書「<b>鍾孟修 Matt 職能治療師</b>」留言。</div>');
+
+/* ---------- render ---------- */
+const stage=document.getElementById('stage');
+stage.innerHTML=SL.map((s,i)=>'<section class="slide '+(s.cls||'')+'" id="p'+(i+1)+'">'+(s.raw!==undefined?s.raw:'<div class="hd"><span class="chip">'+s.sec+'</span><h1>'+s.title+'</h1></div><div class="bd">'+s.body+'</div>')+'</section>').join('');
+const els=[...stage.children];let cur=0;
+const plain=h=>h.replace(/<[^>]+>/g,'');
+function fit(){const w=document.getElementById('wrap'),k=Math.min(w.clientWidth/1600,w.clientHeight/900);stage.style.transform='scale('+k+') translate(-50%,-50%)';}
+function go(n,fromHash){n=Math.max(0,Math.min(els.length-1,n));els[cur].classList.remove('on');els[cur].querySelectorAll('video').forEach(v=>v.pause());cur=n;els[cur].classList.add('on');
+  document.getElementById('pos').textContent=(cur+1)+' / '+els.length;document.getElementById('cur').textContent=SL[cur].sec+'｜'+plain(SL[cur].title);
+  document.getElementById('prog').style.width=((cur+1)/els.length*100)+'%';
+  if(!fromHash){try{history.replaceState(null,'','#p'+(cur+1));}catch(e){location.hash='p'+(cur+1);}}}
+function fromHash(){const m=/^#p(\d+)$/.exec(location.hash);go(m?+m[1]-1:0,true);}
+const toc=document.getElementById('toc');
+function buildToc(){let h='',last='';SL.forEach((s,i)=>{if(s.sec!==last){if(last)h+='</div>';h+='<h2>'+s.sec+'</h2><div class="ti">';last=s.sec;}h+='<button type="button" data-i="'+i+'"><span class="k">'+(i+1)+'</span><span>'+plain(s.title)+'</span></button>';});toc.innerHTML=h+'</div>';}
+function toggleToc(f){const show=f!==undefined?f:toc.hidden;toc.hidden=!show;if(show){toc.querySelectorAll('button').forEach(b=>b.classList.toggle('cur',+b.dataset.i===cur));const c=toc.querySelector('.cur');if(c)c.scrollIntoView({block:'center'});}}
+toc.addEventListener('click',e=>{const b=e.target.closest('button');if(b){go(+b.dataset.i);toggleToc(false);}});
+stage.addEventListener('click',e=>{const o=e.target.closest('.opt');if(!o)return;const q=o.closest('.quiz');q.querySelectorAll('.opt').forEach(b=>{b.classList.remove('ok','no');if(b.dataset.ok==='1')b.classList.add('ok');});if(o.dataset.ok!=='1')o.classList.add('no');q.querySelector('.ans').hidden=false;});
+document.getElementById('bPrev').onclick=()=>go(cur-1);document.getElementById('bNext').onclick=()=>go(cur+1);
+document.getElementById('bToc').onclick=()=>toggleToc();
+document.getElementById('bFs').onclick=()=>{const d=document.documentElement;try{(document.fullscreenElement?document.exitFullscreen():d.requestFullscreen()).catch(()=>{});}catch(e){}};
+document.addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('video'))return;const k=e.key;
+  if(k==='Escape'){toggleToc(false);return;}
+  if(k==='g'||k==='G'){toggleToc();return;}
+  if(!toc.hidden)return;
+  if(k==='ArrowRight'||k==='PageDown'||k===' '&&!e.target.closest('button,a')){e.preventDefault();go(cur+1);}
+  else if(k==='ArrowLeft'||k==='PageUp'){e.preventDefault();go(cur-1);}
+  else if(k==='Home')go(0);else if(k==='End')go(els.length-1);});
+let tx=null,ty=null;const wrap=document.getElementById('wrap');
+wrap.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY;},{passive:true});
+wrap.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1));},{passive:true});
+window.addEventListener('resize',fit);window.addEventListener('hashchange',fromHash);
+buildToc();fit();fromHash();
+})();
+</script>
+
+</body></html>
